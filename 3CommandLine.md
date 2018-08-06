@@ -9,6 +9,7 @@
 * need proxy?
 * get slides setup
 * remind students to register for GitHub account
+* XKCD comic: https://xkcd.com/1597/
 
 ####Reources
 * class website: http://ouinformatics.github.io/2015-05-27-osu 
