@@ -51,14 +51,14 @@
 	* What's in this folder?
 * README: plain text file, open in text editor
 	* documents contents of repository, can describe code and/or data
-	* pre-populated with title of the repository and short description
-	* .md suffix indicates markdown format, which is for text formatting
+	* pre-populated with title of the repository (and short description?)
+	* .md suffix indicates markdown format, which is for text formatting (same as hackmd)
 * What else is in the repo?
 	* use CMD + Shift + . to reveal hidden files
 	* .gitattributes: created by app to maintain line endings, which can differ between operating systems
 	* .git directory: contains tracking of changes as recorded by git software
 	* entire directory is a unit
-
+* Challenge: Why would it be a bad idea to create another git repository inside this directory?
 
 ## Tracking changes
 
@@ -74,12 +74,14 @@
 	* click button for "commit to master", where "master" refers to the branch (we'll talk more about this later, but master is default)
 * git workflow: save changes, make sure box is checked, commit
 	* edit file again (right click to "Open in Atom"), commit changes
-	* create new file in text editor, add brief content, commit changes
+	* create new file named notes.txt in text editor, add brief content, commit changes
 	* relate to shopping cart analogy
-* create folder
+* Challenge:
+	* create new file named analysis.txt, add content, save, and commit
+	* make and save changes to both analysis.txt and notes.txt, commit both at once
+* create folder named data/
 	* can you commit new folder?
-	* create file in folder, can you commit now?
-	* make change to more than one file: can commit changes to related files all at once
+	* create file data1.txt in folder, can you commit now?
 
 
 ## Exploring history
@@ -96,9 +98,13 @@
 
 ## Ignoring things
 
+* create new file, temp.txt, save and commit
 * Repository -> Repository settings
 * select tab for "Ignored Files"
-* add name of file
+* add temp.txt to this file; what happens?
+* add notes.txt to the ignore file; what happens?
+	* this is an example of a specific task which may be better accomplished with command line functions
+	* preview concerns with managing large data files or secure info 
 
 
 ## Wrapping up
