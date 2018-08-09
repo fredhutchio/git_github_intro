@@ -104,7 +104,8 @@
 * add temp.txt to this file; what happens?
 * add notes.txt to the ignore file; what happens?
 	* this is an example of a specific task which may be better accomplished with command line functions
-	* preview concerns with managing large data files or secure info 
+	* preview concerns with managing large data files or secure info
+* can ignore entire directories, or use wildcards to indicate types of files 
 
 
 ## Wrapping up
