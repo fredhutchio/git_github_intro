@@ -23,7 +23,14 @@
 
 ## Intro to version control
 
-* why version control? PhD comic
+* why version control? 
+	* other places version control is used: MS Word "track changes", Google Docs versions, Mac OSX Time Machine
+	* version control (and git) can be used for anything, but is especially important for code
+	* code is like a list of instructions, in which changes may have unexpected consequences elsewhere in the code
+	* working across complex code may require being able to interpret which changes affect other parts downstream, many changes later
+	* knowing what code works at which point in time and what changes to the code may have caused problems is what version control allows us to manage
+	* simplest case: a single document, make changes to code, then make more changes
+	* more complex case: multiple copies of a document, with different changes made to each that need to be reconciled.
 * git: version control software (there are many others)
 * GitHub: online code repository for publishing/sharing code and/or data (there are others)
 * using git and GitHub because they are currently popular for academic and industry groups, many folks on campus are using them
@@ -62,6 +69,7 @@
 
 ## Tracking changes
 
+* overview of text editors and why to use them
 * add note to README and save
 * what happens in app?
 	* "Changes" tab in left panel shows what files have been altered: saved on computer, but not tracked by git yet
