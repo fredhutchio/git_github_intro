@@ -6,13 +6,29 @@
 * check installation of text editor, GitHub Desktop and GitHub account (need latter to set up former)
 * PhD comic: http://phdcomics.com/comics.php?f=1531
 
+## Introductions and motivation
+
+* introduce myself
+* sign in to hackmd with name and motivation
+* informal pre-class survey:
+	* who's used Git or GitHub before?
+	* show comic: who wants a better way?
+* course overview: desktop app, GitHub, command line to integrate both
+* objectives:
+	* describe why and when to use version control
+	* apply git workflow to tracking changes using GitHub Desktop app
+	* view and recall history of tracked changes
+	* ignore files that don't need to be in repository
+
+
 ## Intro to version control
 
 * why version control? PhD comic
-* ask who's been to a GitHub site before (for research purposes)
 * git: version control software (there are many others)
 * GitHub: online code repository for publishing/sharing code and/or data (there are others)
 * using git and GitHub because they are currently popular for academic and industry groups, many folks on campus are using them
+* lots of help documentation about git and GitHub, so today is a crash course and brief overview of functionality
+
 
 ## Setup
 
@@ -59,7 +75,7 @@
 * git workflow: save changes, make sure box is checked, commit
 	* edit file again (right click to "Open in Atom"), commit changes
 	* create new file in text editor, add brief content, commit changes
-	* relate to shopping cart analogy 
+	* relate to shopping cart analogy
 * create folder
 	* can you commit new folder?
 	* create file in folder, can you commit now?
@@ -71,11 +87,12 @@
 * "Undo" button at bottom of changes tab, can undo one at a time
 * history tab in left panel
 	* shows every time you've committed changes (remember, this is different than each time you hit save on a file)
-	* right click 
+	* right click
 	* "Revert commit" to go directly back to that point in history: this retains all changes, but undoes the tracking in Git
 * SHA: Secure Hash Algorithm
 	* string of alphanumeric characters, unique label for the commit
 	* can be just the first seven characters
+
 
 ## Ignoring things
 
@@ -83,4 +100,10 @@
 * select tab for "Ignored Files"
 * add name of file
 
+
 ## Wrapping up
+
+* review objectives
+* short demo of Git Kraken
+* preview next week
+* link to comment box
