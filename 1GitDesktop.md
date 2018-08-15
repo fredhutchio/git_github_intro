@@ -6,13 +6,16 @@
 * check installation of text editor, GitHub Desktop and GitHub account (need latter to set up former)
 * PhD comic: http://phdcomics.com/comics.php?f=1531
 
-## Introductions and motivation
+## Introductions
 
 * introduce myself
 * sign in to hackmd with name and motivation
 * informal pre-class survey:
 	* who's used Git or GitHub before?
 	* show comic: who wants a better way?
+
+## Objectives
+
 * course overview: desktop app, GitHub, command line to integrate both
 * objectives:
 	* describe why and when to use version control

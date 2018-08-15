@@ -2,6 +2,14 @@
 
 * XKCD comic: https://xkcd.com/1296/
 
+## Objectives
+
+* review previous week's materials
+* today's objectives:
+	* differentiate between local and remote repositories
+	* use GitHub to publish your own code/data
+	* contribute to someone else's repository using GitHub
+
 ## Introduction to GitHub
 
 * Github is cool because collaboration!
@@ -42,3 +50,7 @@
 * licensing vs. social expectations
 
 ## Wrapping up
+
+* review today's objectives
+* preview next week: optional, but need additional tools if coming
+* link to comment box
