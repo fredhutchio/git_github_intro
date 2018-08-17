@@ -23,7 +23,10 @@
 	* organizations (fredhutchio as example)
 	* paid accounts can have private repos (also education discounts)
 	* settings on personal page
-* examining an example repository: https://github.com/fredhutchio/git_github_intro
+* examining an example repository: 
+	* this course: https://github.com/fredhutchio/git_github_intro
+	* research project (manuscript): https://github.com/rasilab/machkovech_2018
+	* software project: https://github.com/tidyverse/ggplot2
 
 
 ## Publishing a local repository
@@ -47,13 +50,18 @@
 * back to Desktop app
 	* "pull" grabs any changes from GitHub and adds to local repository
 * deleting a repository (if desired)
+	* settings
+	* scroll to bottom, "Danger Zone"
+	* delete repo, must type title of repo, no going back
 
 
 ## Collaborating
 
 * https://github.com/fredhutchio/guacamole
 * issues
-	* what are they, who can use, how?
+	* way to interact with developers about their code, request new features, report bugs
+	* anyone with GitHub account can post issue
+	* not always appropriate to ask questions about how to use software (see other documentation, Google groups, etc)
 * fork repository
 	* this repository is owned by fredhutchio (GitHub organization)
 	* you don't have permission to work directly with the repository
@@ -63,15 +71,22 @@
 * edit ingredients.txt to include additional ingredients
 * create new file called recipe.txt to include steps in process to making guac
 * compare with original version in fredhutchio
-* can choose additional comparisons (e.g., other people)
+* can choose additional comparisons (e.g., other people, or other branches)
 * create pull request (PR)
-* PR etiquette
+	* text editing options, linking people, issues, etc
+	* PR etiquette: explain sufficiently the changes and why; be polite
 
 
 ## Conflicts
 
-* Kate demo: accept one of the PRs, then try to accept another
-* if they don't match, there is a conflict that must be managed
+* owner of main guacamole repo (instructor) works through PRs
+	* accept one of the PRs, then try to accept another
+* if they don't match, there is a conflict 
+	* must resolve conflicts before merging new changes
+	* multiple ways to accomplish this: through web app, or in local repo with Desktop app
+	* each file must be handled; remind about how differences in files are reported 
+	* for code, it matters a lot that extra added characters (>>>>> and <<<<<) are removed
+* review commit history, contributors, etc
 
 
 ## Open science
@@ -85,14 +100,13 @@
 	* additional resources for choosing a license, etc
 	* you have accepted licensing associated with software already (every time you use something!)
 * web hosting
-	* example of fredhutch.io webpage 
+	* example: http://www.fredhutch.io, click "GitHub Project" in left menu to see code
 	* .io suffix	
 	* gh-pages
-* demo git integration with RStudio
 
 	
 ## Wrapping up
 
 * review today's objectives
-* preview next week: optional, but need additional tools if coming
+* preview next week: optional, but need additional tools if coming (see fredhutch.io website)
 * link to comment box
