@@ -125,6 +125,9 @@
 * Challenge: Ignoring files that have already been committed retains the file in the git log. How could we remove these completely from the repo?
 
 
+## Branches
+
+
 ## Connecting local and remote repositories with GitHub
 
 * log in to GitHub, click icon in top right corner, create repo called `git_project`
@@ -137,6 +140,9 @@
 * check remote repo, changes should be there.
 * create README file and add brief comment about the purpose of the materials, commit change, go back to terminal: `git pull origin master`
 * Challenge: How is `git push` different from `git commit`?
+
+
+## Updating local repositories with a remote repo owned by someone else
 
 
 ## Wrapping up
