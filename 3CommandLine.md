@@ -56,17 +56,17 @@
 * Challenge: Let's say you accidentally initialized a repository inside another existing git repo. What could you do to undo this mistake?
 
 
-## Tracking changes 
+## Tracking changes
 
 * create new file: `touch manuscript.txt`
-* open in text editor or use `nano manuscript.txt` or `vi manuscript.txt` 
+* open in text editor or use `nano manuscript.txt` or `vi manuscript.txt`
 	* add text, exit and save
 	* `ls`, `cat manuscript.txt`
 * show status of project: `git status`
 	* "untracked files": there's something not being tracked
-* add file: `git add mars.txt`
+* add file: `git add manuscript.txt`
 * `git status` "Changes to be committed": it's tracking, but the changes aren't recorded
-* commit file: `git commit -m "creating script"`
+* commit file: `git commit -m "creating manuscript"`
 	* commits record to history in .git, called a revision, with short identifier
 	* run without -m and will open editor to add comment (you've specified your preference earlier today)
 	* good commits: brief (<50 characters), for more info, add empty line (adds in separate field)
@@ -74,7 +74,7 @@
 * check history: `git log`
 	* lists all revisions in reverse chronological order: full identifier (relate to short identifier, same initial characters),
 	* when created, log message
-* make another change (this is just one way): `touch supplement.txt`, `cat supplement.txt`
+* make another change (this is just one way): `vi manuscript.txt`, `cat manuscript.txt`
 * check status: `git status`
 * look at differences: `git diff`
 	* first line: old and new version of files, similar to diff command in Unix
@@ -84,40 +84,42 @@
 * commit changes: `git commit -m "adding change"`
 * but change hasn't been added!: `git add`, `git commit`
 * working through staging
-* `nano supplement.txt`, make change
+* new file: `vi supplement.txt`
 * look at differences: `git diff`
 * stage file: `git add supplement.txt`, `git diff` (no output)
-* `git diff –staged` (shows differences)
+* `git diff –-staged` (shows differences)
 * `git commit -m`, `git status`, `git log`
-* `git commit workflow`
+* git commit workflow
 * Challenge: What commands would you use to save the changes of a new file, `test.txt`, to your local Git repo?
 * Challenge: Create a new Git repository on your computer called bio; Write a three-line biography for yourself in a file called me.txt, commit your changes; Modify one line, add a fourth line; Display the differences between its updated state and its original state.
 
 
 ## Exploring history
 
-
+* prompts in git output can help you!
 * compare different versions of commits
 	* HEAD~1 (HEAD minus 1) and HEAD~2 refer to old commits: most recent end of chain is HEAD
 	* `git diff HEAD~1 supplement.txt`
 	* `git diff HEAD~2 supplement.txt`
+	* `git show HEAD~2 supplement.txt` : includes changes and commit message
 	* `git log` gives strings of digits and letters: `git diff XXXXXXXX supplement.txt`
 	* can also just use first few characters: `git diff XXX supplement.txt`
 * how to revert to old version?
 	* make another change, `git status`
-	* `git checkout` to remove unstaged changes (default to previous committed version)
-	* `git checkout XXX supplement.txt`
-	* remember that you want changes before most recent commit 
+	* `git checkout HEAD filename` to remove unstaged changes (default to previous committed version)
+	* `git checkout XXX filename` to go back further in history
+	* remember that you want changes before most recent commit
+	* if you use `git checkout` without a file name, may end up with detached head
 * Challenge: git checkout can be used to restore a previous commit when unstaged changes have been made, but will it also work for changes that have been staged but not committed? Make a change to manuscript.txt, add that change, and use git checkout to see if you can remove your change.
 
 
 ## Ignoring things
 
 * sometimes backup files are created by other programs, or intermediate files we don't want to track
-* create dummy files 
+* create dummy files
 * `mkdir results`, `touch a.dat b.dat c.dat results/a.out results/b.out`
 * `git status`: lots of stuff needs to be committed, but we don't want to!
-* `nano .gitignore`, add `*.dat` and `results/`
+* `vi .gitignore`, add `*.dat` and `results/`
 * `git status`: now .gitignore is the only thing there!
 * `git add .gitignore`, `git commit -m “add ignore file”`, `git status`
 * `git add a.dat`: error
@@ -126,6 +128,17 @@
 
 
 ## Branches
+
+* `git branch`
+* `git branch testing`
+* `git branch`
+* `git checkout testing`
+* `git checkout -b testing2`
+* `git branch -D testing2`
+* checkout testing branch
+* create new file, commit
+* switch to master
+* `git merge testing master`
 
 
 ## Connecting local and remote repositories with GitHub
