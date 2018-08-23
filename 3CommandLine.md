@@ -53,7 +53,7 @@
 * ask status of project
 * `git status`
 * output also adds helpful comments
-* Challenge:
+* Challenge: Let's say you accidentally initialized a repository inside another existing git repo. What could you do to undo this mistake?
 
 
 ## Tracking changes 
@@ -90,7 +90,8 @@
 * `git diff –staged` (shows differences)
 * `git commit -m`, `git status`, `git log`
 * `git commit workflow`
-* Challenge: 
+* Challenge: What commands would you use to save the changes of a new file, `test.txt`, to your local Git repo?
+* Challenge: Create a new Git repository on your computer called bio; Write a three-line biography for yourself in a file called me.txt, commit your changes; Modify one line, add a fourth line; Display the differences between its updated state and its original state.
 
 
 ## Exploring history
@@ -107,7 +108,7 @@
 	* `git checkout` to remove unstaged changes (default to previous committed version)
 	* `git checkout XXX supplement.txt`
 	* remember that you want changes before most recent commit 
-* Challenge:
+* Challenge: git checkout can be used to restore a previous commit when unstaged changes have been made, but will it also work for changes that have been staged but not committed? Make a change to manuscript.txt, add that change, and use git checkout to see if you can remove your change.
 
 
 ## Ignoring things
@@ -121,10 +122,10 @@
 * `git add .gitignore`, `git commit -m “add ignore file”`, `git status`
 * `git add a.dat`: error
 * `git status --ignored`
-* Challenge:
+* Challenge: Ignoring files that have already been committed retains the file in the git log. How could we remove these completely from the repo?
 
 
-## Remotes in GitHub
+## Connecting local and remote repositories with GitHub
 
 * log in to GitHub, click icon in top right corner, create repo called `git_project`
 * resulting page has info about configuring repository, it's done the `mkdir git_project`, `cd git_project`, `git init` process remotely
@@ -135,7 +136,7 @@
 * now send local changes to remote repo: `git push origin master`
 * check remote repo, changes should be there.
 * create README file and add brief comment about the purpose of the materials, commit change, go back to terminal: `git pull origin master`
-* Challenge:
+* Challenge: How is `git push` different from `git commit`?
 
 
 ## Wrapping up
