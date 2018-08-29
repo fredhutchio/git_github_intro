@@ -13,13 +13,13 @@
 
 ## Objectives
 
-* configure git on command line 
+* configure git on command line
 * create and track work in local repositories
 * practice git workflow (modify-add-commit)
 * viewing and reverting history, ignoring things
 * connecting with remote repos in GitHub
 
-	
+
 ## SETUP
 
 * why use git on command line?
@@ -27,16 +27,11 @@
 	* working on a remote computer (command line only)
 	* doing work on command line already and you don't want to switch windows
 * check configuration (most should've been set by Git Desktop)
-	* `git config –list`
-	* user.name, user.email, 
-* if anything needs to be set:
+	* `git config –-list`
 	* `git config --global user.name "k8hertweck"`
 	* `git config --global user.email "k8hertweck@gmail.com"`
-	* nano: `git config --global core.editor "nano -w"`
-	* text wrangler: `git config --global core.editor "edit -w"`
-	* notepad++: `git config --global core.editor "'c:/program files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"`
 	* `--global` means these settings will apply to all repos
-* syntax for git: `git VERB`	
+* syntax for git: `git VERB`
 
 
 ## Creating a local repository
@@ -153,6 +148,7 @@
 * check remote repo, changes should be there.
 * create README file and add brief comment about the purpose of the materials, commit change, go back to terminal: `git pull origin master`
 * Challenge: How is `git push` different from `git commit`?
+* Challenge: You have cloned a repo owned by someone else. Can you push to and pull from that repo?
 
 
 ## Updating local repositories with a remote repo owned by someone else
