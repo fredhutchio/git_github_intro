@@ -4,15 +4,14 @@
 
 * share URL to hack.md
 * check installation of text editor, GitHub Desktop and GitHub account (need latter to set up former)
-* PhD comic: http://phdcomics.com/comics.php?f=1531
 
 ## Introductions
 
 * introduce myself
-* sign in to hackmd with name and motivation
+* refer to materials for course
 * informal pre-class survey:
+	* PhD comic: http://phdcomics.com/comics.php?f=1531: who wants a better way?
 	* who's used Git or GitHub before?
-	* show comic: who wants a better way?
 
 ## Objectives
 
@@ -26,7 +25,7 @@
 
 ## Intro to version control
 
-* why version control? 
+* why version control?
 	* other places version control is used: MS Word "track changes", Google Docs versions, Mac OSX Time Machine
 	* version control (and git) can be used for anything, but is especially important for code
 	* code is like a list of instructions, in which changes may have unexpected consequences elsewhere in the code
@@ -69,6 +68,7 @@
 	* .git directory: contains tracking of changes as recorded by git software
 	* entire directory is a unit
 * Challenge: Why would it be a bad idea to create another git repository inside this directory?
+
 
 ## Tracking changes
 
@@ -116,7 +116,14 @@
 * add notes.txt to the ignore file; what happens?
 	* this is an example of a specific task which may be better accomplished with command line functions
 	* preview concerns with managing large data files or secure info
-* can ignore entire directories, or use wildcards to indicate types of files 
+* can ignore entire directories, or use wildcards to indicate types of files
+
+
+## Branches
+* branch: parallel version of master repository, allows making changes to test without changing original version
+* create new branch
+* make changes
+* merge branch with master
 
 
 ## Wrapping up
