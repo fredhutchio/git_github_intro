@@ -18,6 +18,7 @@ If you have feedback about this course, please
 * Challenge 2: Why would it be a bad idea to initialize a new git repository inside an existing git repository?
 * Class notes [here](https://github.com/fredhutchio/git_github_intro/blob/master/1GitDesktop.md)
 * Additional help documentation: [Getting started with GitHub Desktop](https://help.github.com/desktop/guides/getting-started-with-github-desktop/)
+* Additional context from [FH Biomedical Data Science Wiki](https://sciwiki.fredhutch.org/bioinformatics/compute_github/)
 
 **Week 2: publishing code and collaborating with GitHub**
 * example repository: [this course](https://github.com/fredhutchio/git_github_intro)
