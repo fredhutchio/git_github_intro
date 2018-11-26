@@ -129,6 +129,5 @@
 ## Wrapping up
 
 * review objectives
-* short demo of Git Kraken
+* short demo of Git Kraken, RStudio interface, Atom
 * preview next week
-* link to comment box
