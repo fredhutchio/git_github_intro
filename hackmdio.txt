@@ -3,18 +3,21 @@ Introduction to Git and GitHub
 
 URL: https://hackmd.io/s/ByWX5rUHm
 
+**Sign in to each class meeting** [here](https://goo.gl/forms/j4MbWJuPoIYeJET12)
+
+This page is for easy access to links we'll use during class. You don't need to do anything with this information until directed by your instructor.
+
 If you have feedback about this course, please
 [comment here](https://goo.gl/forms/Bw8dTV0Wghq2iG5i2)
 
-Have you:
-* installed GitHub Desktop?
-* installed a text editor?
-* signed up for a GitHub account?
+* Complete class notes [here](https://github.com/fredhutchio/git_github_intro)
 
 **Week 1: git workflow with GitHub Desktop App**
+* Have you installed GitHub Desktop and text editor? Have you signed up for a GitHub account?
 * Challenge 1: Create a new directory in your repository named "data", and try commit it.
 * Challenge 2: Why would it be a bad idea to initialize a new git repository inside an existing git repository?
 * Class notes [here](https://github.com/fredhutchio/git_github_intro/blob/master/1GitDesktop.md)
+* Additional help documentation: [Getting started with GitHub Desktop](https://help.github.com/desktop/guides/getting-started-with-github-desktop/)
 
 **Week 2: publishing code and collaborating with GitHub**
 * example repository: [this course](https://github.com/fredhutchio/git_github_intro)
