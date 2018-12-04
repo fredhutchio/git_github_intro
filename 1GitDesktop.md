@@ -26,7 +26,7 @@
 
 ## Intro to version control
 
-* why version control? 
+* why version control?
 	* other places version control is used: MS Word "track changes", Google Docs versions, Mac OSX Time Machine
 	* version control (and git) can be used for anything, but is especially important for code
 	* code is like a list of instructions, in which changes may have unexpected consequences elsewhere in the code
@@ -116,7 +116,7 @@
 * add notes.txt to the ignore file; what happens?
 	* this is an example of a specific task which may be better accomplished with command line functions
 	* preview concerns with managing large data files or secure info
-* can ignore entire directories, or use wildcards to indicate types of files 
+* can ignore entire directories, or use wildcards to indicate types of files
 
 
 ## Wrapping up

@@ -23,7 +23,7 @@
 	* organizations (fredhutchio as example)
 	* paid accounts can have private repos (also education discounts)
 	* settings on personal page
-* examining an example repository: 
+* examining an example repository:
 	* this course: https://github.com/fredhutchio/git_github_intro
 	* research project (manuscript): https://github.com/rasilab/machkovech_2018
 	* software project: https://github.com/tidyverse/ggplot2
@@ -81,10 +81,10 @@
 
 * owner of main guacamole repo (instructor) works through PRs
 	* accept one of the PRs, then try to accept another
-* if they don't match, there is a conflict 
+* if they don't match, there is a conflict
 	* must resolve conflicts before merging new changes
 	* multiple ways to accomplish this: through web app, or in local repo with Desktop app
-	* each file must be handled; remind about how differences in files are reported 
+	* each file must be handled; remind about how differences in files are reported
 	* for code, it matters a lot that extra added characters (>>>>> and <<<<<) are removed
 * review commit history, contributors, etc
 
@@ -101,10 +101,10 @@
 	* you have accepted licensing associated with software already (every time you use something!)
 * web hosting
 	* example: http://www.fredhutch.io, click "GitHub Project" in left menu to see code
-	* .io suffix	
+	* .io suffix
 	* gh-pages
 
-	
+
 ## Wrapping up
 
 * review today's objectives
