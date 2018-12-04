@@ -31,29 +31,26 @@
 
 ## Publishing a local repository
 
-* using repository from last week, review Git workflow using Desktop app (can use Kate's if you deleted yours)
-* create remote repository
-	* on GitHub profile page, click Repositories tab
-	* click green button to create new repository
-	* name (same as existing local repo)
-	* leave all other options as default
-	* this has created and initialized remote but empty repo
-* connect the local and remote repos
-	* click button to "set up in Desktop"
-	* opens app
-	* locate appropriate local repository
+* using repository from last week, review Git workflow using Desktop app (can use instructor's if you deleted yours)
+* Use "Publish repository" button in center of app to initialize new repo in GitHub
+	* uncheck "keep code private"
+* view repo on GitHub; locate history and compare to desktop app
+* commit another change locally through Desktop app and push
 	* "push" sends all local changes to remote repo
-* view repo on GitHub
-	* may need to refresh page
-	* locate history and compare to desktop app
-	* make change and commit
-* back to Desktop app
+	* will need to refresh remote repo page to see changes
+* commit a change to remote repo
+	* altering files
+	* creating files
+	* creating directories
+* back to Desktop app to pull changes from remote repo
 	* "pull" grabs any changes from GitHub and adds to local repository
+	* view history for different change types
+* can also create remote repository on GitHub and connect locally (but this takes more steps)
+* Challenge:
 * deleting a repository (if desired)
 	* settings
 	* scroll to bottom, "Danger Zone"
-	* delete repo, must type title of repo, no going back
-
+	* delete repo, must type title of repo, no going back (unless you have a local copy of the repo)
 
 ## Collaborating
 
