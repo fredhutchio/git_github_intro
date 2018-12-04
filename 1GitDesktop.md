@@ -4,15 +4,14 @@
 
 * share URL to hack.md
 * check installation of text editor, GitHub Desktop and GitHub account (need latter to set up former)
-* PhD comic: http://phdcomics.com/comics.php?f=1531
 
 ## Introductions
 
 * introduce myself
-* sign in to hackmd with name and motivation
+* refer to materials for course
 * informal pre-class survey:
+	* PhD comic: http://phdcomics.com/comics.php?f=1531: who wants a better way?
 	* who's used Git or GitHub before?
-	* show comic: who wants a better way?
 
 ## Objectives
 
@@ -69,6 +68,7 @@
 	* .git directory: contains tracking of changes as recorded by git software
 	* entire directory is a unit
 * Challenge: Why would it be a bad idea to create another git repository inside this directory?
+
 
 ## Tracking changes
 

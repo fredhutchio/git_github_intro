@@ -1,0 +1,33 @@
+Introduction to Git and GitHub
+==
+
+URL: https://hackmd.io/s/ByWX5rUHm
+
+**Sign in to each class meeting** [here](https://goo.gl/forms/j4MbWJuPoIYeJET12)
+
+This page is for easy access to links we'll use during class. You don't need to do anything with this information until directed by your instructor.
+
+If you have feedback about this course, please
+[comment here](https://goo.gl/forms/Bw8dTV0Wghq2iG5i2)
+
+* Complete class notes [here](https://github.com/fredhutchio/git_github_intro)
+
+**Week 1: git workflow with GitHub Desktop App**
+* Have you installed GitHub Desktop and text editor? Have you signed up for a GitHub account?
+* Challenge 1: Create a new directory in your repository named "data", and try commit it.
+* Challenge 2: Why would it be a bad idea to initialize a new git repository inside an existing git repository?
+* Class notes [here](https://github.com/fredhutchio/git_github_intro/blob/master/1GitDesktop.md)
+* Additional help documentation: [Getting started with GitHub Desktop](https://help.github.com/desktop/guides/getting-started-with-github-desktop/)
+* Additional context from [FH Biomedical Data Science Wiki](https://sciwiki.fredhutch.org/bioinformatics/compute_github/)
+
+**Week 2: publishing code and collaborating with GitHub**
+* example repository: [this course](https://github.com/fredhutchio/git_github_intro)
+* example repository: [research](https://github.com/rasilab/machkovech_2018)
+* If you deleted your repo you can use this [dummy repository] (https://www.dropbox.com/s/du8e95dzzkm7zun/example_repository.zip) for today's exercises
+* practice collaboration repository: [guacamole](https://github.com/fredhutchio/guacamole)
+* example repository: [website](http://www.fredhutch.io)
+* Class notes [here](https://github.com/fredhutchio/git_github_intro/blob/master/2GitHub.md)
+
+**Week 3 (optional): git command line interface**
+* [Setting up your text editor](http://swcarpentry.github.io/git-novice/02-setup/index.html)
+* Class notes [here](https://github.com/fredhutchio/git_github_intro/blob/master/3CommandLine.md)

@@ -59,20 +59,21 @@
 	* way to interact with developers about their code, request new features, report bugs
 	* anyone with GitHub account can post issue
 	* not always appropriate to ask questions about how to use software (see other documentation, Google groups, etc)
+* Challenge: create issue
 * fork repository
 	* this repository is owned by fredhutchio (GitHub organization)
 	* you don't have permission to work directly with the repository
 	* click "fork" button in the upper right hand corner of repo
 	* this creates a copy of the repository of your own that is connected with the original, but which you can edit yourself
 	* relate back to branches
-* edit ingredients.txt to include additional ingredients
+* create new branch, edit ingredients.txt to include additional ingredients
 * create new file called recipe.txt to include steps in process to making guac
 * compare with original version in fredhutchio
 * can choose additional comparisons (e.g., other people, or other branches)
-* create pull request (PR)
+* Challenge: create pull request (PR)
 	* text editing options, linking people, issues, etc
 	* PR etiquette: explain sufficiently the changes and why; be polite
-
+	
 
 ## Conflicts
 
@@ -84,6 +85,7 @@
 	* each file must be handled; remind about how differences in files are reported
 	* for code, it matters a lot that extra added characters (>>>>> and <<<<<) are removed
 * review commit history, contributors, etc
+* Challenge: create PR for your neighbor's guac repo and reconcile changes
 
 
 ## Open science
@@ -100,6 +102,8 @@
 	* example: http://www.fredhutch.io, click "GitHub Project" in left menu to see code
 	* .io suffix
 	* gh-pages
+* Challenge: try to edit Kate's wiki repo
+	* creates new branch (patch) in own forked repo
 
 
 ## Wrapping up
