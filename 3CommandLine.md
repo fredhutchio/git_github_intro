@@ -102,6 +102,7 @@
 	* `git checkout XXX filename` to go back further in history
 	* remember that you want changes before most recent commit
 	* if you use `git checkout` without a file name, may end up with detached head
+	* git revert
 * Challenge: git checkout can be used to restore a previous commit when unstaged changes have been made, but will it also work for changes that have been staged but not committed? Make a change to manuscript.txt, add that change, and use git checkout to see if you can remove your change.
 
 
@@ -159,6 +160,7 @@
 
 ## Cherrypicking: merging only some commits from one branch into another
 https://www.previousnext.com.au/blog/intro-cherry-picking-git
+Related: git rebase -i SHA https://blog.github.com/2015-06-08-how-to-undo-almost-anything-with-git/
 
 
 ## Removing a file completely from git log
