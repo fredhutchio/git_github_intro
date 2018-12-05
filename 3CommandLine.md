@@ -13,11 +13,11 @@
 
 ## Objectives
 
-* configure git on command line
-* create and track work in local repositories
+* transfer knowledge from GUI to command line
 * practice git workflow (modify-add-commit)
-* viewing and reverting history, ignoring things
-* connecting with remote repos in GitHub
+* update local repo with a remote repo owned by someone else
+* cherrypicking
+* removing a file completely from git log
 
 
 ## SETUP
@@ -28,9 +28,6 @@
 	* doing work on command line already and you don't want to switch windows
 * check configuration (most should've been set by Git Desktop)
 	* `git config –-list`
-	* `git config --global user.name "k8hertweck"`
-	* `git config --global user.email "k8hertweck@gmail.com"`
-	* `--global` means these settings will apply to all repos
 * syntax for git: `git VERB`
 
 
@@ -122,7 +119,7 @@
 * Challenge: Ignoring files that have already been committed retains the file in the git log. How could we remove these completely from the repo?
 
 
-## Branches
+## Working with branches
 
 * `git branch`
 * `git branch testing`
@@ -136,7 +133,7 @@
 * `git merge testing master`
 
 
-## Connecting local and remote repositories with GitHub
+## Publishing local repository to GitHub
 
 * log in to GitHub, click icon in top right corner, create repo called `git_project`
 * resulting page has info about configuring repository, it's done the `mkdir git_project`, `cd git_project`, `git init` process remotely
@@ -158,6 +155,15 @@
 * git fetch upstream (fetch updates)
 * git checkout master (checkout master fork)
 * git merge upstream/master (add upstream changes without losing local changes)
+
+
+## Cherrypicking: merging only some commits from one branch into another
+https://www.previousnext.com.au/blog/intro-cherry-picking-git
+
+
+## Removing a file completely from git log
+https://help.github.com/articles/removing-sensitive-data-from-a-repository/
+
 
 ## Wrapping up
 
