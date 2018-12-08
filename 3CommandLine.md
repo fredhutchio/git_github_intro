@@ -34,8 +34,8 @@
 ## Creating a local repository
 
 * `cd`
-* `mkdir git_project`
-* `cd git_project`
+* `mkdir git_command_line`
+* `cd git_command_line`
 * tell git where to store old records and versions of file
 	* `git init`
 * list everything (including hidden files)
@@ -45,20 +45,19 @@
 * ask status of project
 * `git status`
 * output also adds helpful comments
-* Challenge: Let's say you accidentally initialized a repository inside another existing git repo. What could you do to undo this mistake?
 
 
 ## Tracking changes
 
-* create new file: `touch manuscript.txt`
-* open in text editor or use `nano manuscript.txt` or `vi manuscript.txt`
+* create new file: `touch code.txt`
+* open in text editor or use `nano code.txt` or `vi code.txt`
 	* add text, exit and save
-	* `ls`, `cat manuscript.txt`
+	* `ls`, `cat code.txt`
 * show status of project: `git status`
 	* "untracked files": there's something not being tracked
-* add file: `git add manuscript.txt`
+* add file: `git add code.txt`
 * `git status` "Changes to be committed": it's tracking, but the changes aren't recorded
-* commit file: `git commit -m "creating manuscript"`
+* commit file: `git commit -m "creating code file"`
 	* commits record to history in .git, called a revision, with short identifier
 	* run without -m and will open editor to add comment (you've specified your preference earlier today)
 	* good commits: brief (<50 characters), for more info, add empty line (adds in separate field)
@@ -66,7 +65,7 @@
 * check history: `git log`
 	* lists all revisions in reverse chronological order: full identifier (relate to short identifier, same initial characters),
 	* when created, log message
-* make another change (this is just one way): `vi manuscript.txt`, `cat manuscript.txt`
+* make another change (this is just one way): `vi code.txt`, `cat code.txt`
 * check status: `git status`
 * look at differences: `git diff`
 	* first line: old and new version of files, similar to diff command in Unix
@@ -76,9 +75,9 @@
 * commit changes: `git commit -m "adding change"`
 * but change hasn't been added!: `git add`, `git commit`
 * working through staging
-* new file: `vi supplement.txt`
+* new file: `vi data.txt`
 * look at differences: `git diff`
-* stage file: `git add supplement.txt`, `git diff` (no output)
+* stage file: `git add data.txt`, `git diff` (no output)
 * `git diff –-staged` (shows differences)
 * `git commit -m`, `git status`, `git log`
 * git commit workflow
@@ -91,11 +90,11 @@
 * prompts in git output can help you!
 * compare different versions of commits
 	* HEAD~1 (HEAD minus 1) and HEAD~2 refer to old commits: most recent end of chain is HEAD
-	* `git diff HEAD~1 supplement.txt`
-	* `git diff HEAD~2 supplement.txt`
-	* `git show HEAD~2 supplement.txt` : includes changes and commit message
-	* `git log` gives strings of digits and letters: `git diff XXXXXXXX supplement.txt`
-	* can also just use first few characters: `git diff XXX supplement.txt`
+	* `git diff HEAD~1 data.txt`
+	* `git diff HEAD~2 data.txt`
+	* `git show HEAD~2 data.txt` : includes changes and commit message
+	* `git log` gives strings of digits and letters: `git diff XXXXXXXX data.txt`
+	* can also just use first few characters: `git diff XXX data.txt`
 * how to revert to old version?
 	* make another change, `git status`
 	* `git checkout HEAD filename` to remove unstaged changes (default to previous committed version)
@@ -103,7 +102,7 @@
 	* remember that you want changes before most recent commit
 	* if you use `git checkout` without a file name, may end up with detached head
 	* git revert
-* Challenge: git checkout can be used to restore a previous commit when unstaged changes have been made, but will it also work for changes that have been staged but not committed? Make a change to manuscript.txt, add that change, and use git checkout to see if you can remove your change.
+* Challenge: git checkout can be used to restore a previous commit when unstaged changes have been made, but will it also work for changes that have been staged but not committed? Make a change to code.txt, add that change, and use git checkout to see if you can remove your change.
 
 
 ## Ignoring things
