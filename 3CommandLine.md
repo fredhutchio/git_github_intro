@@ -151,7 +151,8 @@
 
 
 ## Updating local repositories with a remote repo owned by someone else
-* git remote -v (check)
+* Change added to guacamole repo
+* get URL to fredhutch.io/guacamole
 * git remote add upstream URL (set remote)
 * git remote -v (check)
 * git fetch upstream (fetch updates)
