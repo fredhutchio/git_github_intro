@@ -90,15 +90,15 @@
 * prompts in git output can help you!
 * compare different versions of commits
 	* HEAD~1 (HEAD minus 1) and HEAD~2 refer to old commits: most recent end of chain is HEAD
-	* `git diff HEAD~1 data.txt`
-	* `git diff HEAD~2 data.txt`
-	* `git show HEAD~2 data.txt` : includes changes and commit message
-	* `git log` gives strings of digits and letters: `git diff XXXXXXXX data.txt`
-	* can also just use first few characters: `git diff XXX data.txt`
+	* `git diff HEAD~1 code.txt`
+	* `git diff HEAD~2 code.txt`
+	* `git show HEAD~2 code.txt` : includes changes and commit message
+	* `git log` gives strings of digits and letters: `git diff XXXXXXXX code.txt`
+	* can also just use first few characters: `git diff XXX code.txt`
 * how to revert to old version?
-	* make another change, `git status`
-	* `git checkout HEAD filename` to remove unstaged changes (default to previous committed version)
-	* `git checkout XXX filename` to go back further in history
+	* make another change to code.txt, `git status`
+	* `git checkout HEAD code.txt` to remove unstaged changes (default to previous committed version)
+	* `git checkout XXX code.txt` to go back further in history
 	* remember that you want changes before most recent commit
 	* if you use `git checkout` without a file name, may end up with detached head
 	* git revert
@@ -116,36 +116,38 @@
 * `git add .gitignore`, `git commit -m “add ignore file”`, `git status`
 * `git add a.dat`: error
 * `git status --ignored`
-* Challenge: Ignoring files that have already been committed retains the file in the git log. How could we remove these completely from the repo?
-
-
-## Working with branches
-
-* `git branch`
-* `git branch testing`
-* `git branch`
-* `git checkout testing`
-* `git checkout -b testing2`
-* `git branch -D testing2`
-* checkout testing branch
-* create new file, commit
-* switch to master
-* `git merge testing master`
+* Challenge: Ignoring files that have already been committed retains the file in the git log. How could we remove these completely from the repo? https://help.github.com/articles/removing-sensitive-data-from-a-repository/
 
 
 ## Publishing local repository to GitHub
 
-* log in to GitHub, click icon in top right corner, create repo called `git_project`
+* log in to GitHub, click icon in top right corner, create repo called `git_command_line`
 * resulting page has info about configuring repository, it's done the `mkdir git_project`, `cd git_project`, `git init` process remotely
 * connect the two repos: copy https url to clipboard
-* go to local repo (in shell): `git remote add origin https://github.com/k8hertweck/git_project`
+* go to local repo (in shell): `git remote add origin URL`
 * `git remote -v`: check that it worked
 * origin is a nickname for remote repo
 * now send local changes to remote repo: `git push origin master`
-* check remote repo, changes should be there.
+* check remote repo, changes should be there (may need to refresh)
 * create README file and add brief comment about the purpose of the materials, commit change, go back to terminal: `git pull origin master`
 * Challenge: How is `git push` different from `git commit`?
 * Challenge: You have cloned a repo owned by someone else. Can you push to and pull from that repo?
+
+
+## Working with branches
+
+* Look at existing branches: `git branch`
+* Create new branch called testing: `git branch testing`
+* `git branch`
+* Switch to new branch: `git checkout testing`
+* Create new branch and checkout at same time: `git checkout -b testing2`
+* Try to delete branch: `git branch -D testing2`
+* `git checkout testing`
+* Successfully delete: `git branch -D testing2`
+* create new file (in testing), commit
+* switch to master
+* `git merge testing master`
+* Delete old branch
 
 
 ## Updating local repositories with a remote repo owned by someone else
@@ -160,10 +162,6 @@
 ## Cherrypicking: merging only some commits from one branch into another
 https://www.previousnext.com.au/blog/intro-cherry-picking-git
 Related: git rebase -i SHA https://blog.github.com/2015-06-08-how-to-undo-almost-anything-with-git/
-
-
-## Removing a file completely from git log
-https://help.github.com/articles/removing-sensitive-data-from-a-repository/
 
 
 ## Wrapping up
