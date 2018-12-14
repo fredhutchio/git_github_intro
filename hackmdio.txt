@@ -5,7 +5,7 @@ URL: XXX
 
 **Sign in to each class meeting** [here](XXX)
 
-Have you installed GitHub Desktop and text editor? Have you signed up for a GitHub account?
+Have you installed GitHub Desktop and text editor? Have you signed up for a GitHub account? Instructions [here](http://www.fredhutch.io/software/)
 
 This page is for easy access to links we'll use during class. You don't need to do anything with this information until directed by your instructor.
 
