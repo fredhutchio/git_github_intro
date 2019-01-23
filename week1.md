@@ -119,13 +119,6 @@
 * can ignore entire directories, or use wildcards to indicate types of files
 
 
-## Branches
-* branch: parallel version of master repository, allows making changes to test without changing original version
-* create new branch
-* make changes
-* merge branch with master
-
-
 ## Wrapping up
 
 * review objectives

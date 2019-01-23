@@ -23,7 +23,7 @@
 	* organizations (fredhutchio as example)
 	* paid accounts can have private repos (also education discounts)
 	* settings on personal page
-* examining an example repository: 
+* examining an example repository:
 	* this course: https://github.com/fredhutchio/git_github_intro
 	* research project (manuscript): https://github.com/rasilab/machkovech_2018
 	* software project: https://github.com/tidyverse/ggplot2
@@ -31,37 +31,37 @@
 
 ## Publishing a local repository
 
-* using repository from last week, review Git workflow using Desktop app (can use Kate's if you deleted yours)
-* create remote repository
-	* on GitHub profile page, click Repositories tab
-	* click green button to create new repository
-	* name (same as existing local repo)
-	* leave all other options as default
-	* this has created and initialized remote but empty repo
-* connect the local and remote repos
-	* click button to "set up in Desktop"
-	* opens app
-	* locate appropriate local repository
+* using repository from last week, review Git workflow using Desktop app (can use instructor's if you deleted yours)
+* Use "Publish repository" button in center of app to initialize new repo in GitHub
+	* uncheck "keep code private"
+* view repo on GitHub; locate history and compare to desktop app
+* commit another change locally through Desktop app and push
 	* "push" sends all local changes to remote repo
-* view repo on GitHub
-	* may need to refresh page
-	* locate history and compare to desktop app
-	* make change and commit
-* back to Desktop app
+	* will need to refresh remote repo page to see changes
+* commit a change to remote repo
+	* altering files
+	* creating files
+	* moving files
+	* creating directories
+* back to Desktop app to pull changes from remote repo
 	* "pull" grabs any changes from GitHub and adds to local repository
+	* view history for different change types
+* can also create remote repository on GitHub and connect locally (but this takes more steps)
+* Challenge: commit a change in remote repo, commit change in local repo, try to push
 * deleting a repository (if desired)
 	* settings
 	* scroll to bottom, "Danger Zone"
-	* delete repo, must type title of repo, no going back
+	* delete repo, must type title of repo, no going back (unless you have a local copy of the repo)
 
+## Collaboration through forking
 
-## Collaborating
-
-* https://github.com/fredhutchio/guacamole
+* Example repository: https://github.com/fredhutchio/guacamole
+	* have default branch set to month and year for class
 * issues
 	* way to interact with developers about their code, request new features, report bugs
 	* anyone with GitHub account can post issue
 	* not always appropriate to ask questions about how to use software (see other documentation, Google groups, etc)
+* Challenge: create issue
 * fork repository
 	* this repository is owned by fredhutchio (GitHub organization)
 	* you don't have permission to work directly with the repository
@@ -71,22 +71,32 @@
 * edit ingredients.txt to include additional ingredients
 * create new file called recipe.txt to include steps in process to making guac
 * compare with original version in fredhutchio
-* can choose additional comparisons (e.g., other people, or other branches)
-* create pull request (PR)
+	* can choose additional comparisons (e.g., other people, or other branches)
+	* create pull request (PR): way to request that original repo will accept your changes
 	* text editing options, linking people, issues, etc
 	* PR etiquette: explain sufficiently the changes and why; be polite
+* Challenge: pair up with a partner and create pull request (PR) to send your changes to their repo
+	* when comparing, your repo will be on the left and their repo will be on the right
+	* don't worry yet about approving pull request
 
 
-## Conflicts
+## Resolving conflicts
 
-* owner of main guacamole repo (instructor) works through PRs
-	* accept one of the PRs, then try to accept another
-* if they don't match, there is a conflict 
+* instructor looks at PRs submitted to original guacamole repo
+	* accept one of the PRs, modeling how conversation might take place
+	* find another that causes a conflict
 	* must resolve conflicts before merging new changes
 	* multiple ways to accomplish this: through web app, or in local repo with Desktop app
-	* each file must be handled; remind about how differences in files are reported 
+	* each file must be handled; remind about how differences in files are reported
 	* for code, it matters a lot that extra added characters (>>>>> and <<<<<) are removed
 * review commit history, contributors, etc
+* Challenge: reconcile changes to accept PR from neighbor's repo
+
+
+## Collaborate through patches
+* Challenge: try to edit Kate's wiki repo by clicking on the edit (pencil) button
+	* creates new branch (patch) in own forked repo
+	* "suggest changes" seamlessly integrates branch (patch) with PR to original repo
 
 
 ## Open science
@@ -101,10 +111,10 @@
 	* you have accepted licensing associated with software already (every time you use something!)
 * web hosting
 	* example: http://www.fredhutch.io, click "GitHub Project" in left menu to see code
-	* .io suffix	
+	* .io suffix
 	* gh-pages
 
-	
+
 ## Wrapping up
 
 * review today's objectives
