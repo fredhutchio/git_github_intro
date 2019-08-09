@@ -17,12 +17,16 @@
 	* local repository: only available on your own hardware (computer)
 	* remote repository: available on someone else's computer and visible to other people
 * overview of GitHub
+	* private vs public repos
 	* log in not necessary to view public repos
 	* when logged in, can see timeline/newsfeed
 	* starring repositories, following people
-	* organizations (fredhutchio as example)
-	* paid accounts can have private repos (also education discounts)
 	* settings on personal page
+* GitHub organizations: fredhutch, fredhutch.io
+	* email scicomp to get added to fredhutch github organization
+	* interact with wiki
+	* can be added to private repositories
+	* teams: groups that can be used to manage permissions
 * examining an example repository:
 	* this course: https://github.com/fredhutchio/git_github_intro
 	* research project (manuscript): https://github.com/rasilab/machkovech_2018
