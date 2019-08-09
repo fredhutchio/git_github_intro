@@ -1,4 +1,4 @@
-# Introduction to git and GitHub
+# Introduction to Git and GitHub
 
 ## Description
 
@@ -6,6 +6,6 @@ This two-week course (with optional third week session) is designed to introduce
 
 ## Schedule
 
-* Week 1: introduction to version control, git workflow with desktop clients (tracking changes, branching, merging, ignoring things)
+* Week 1: introduction to version control, git workflow with desktop clients (tracking changes, branching, merging, ignoring things, branches)
 * Week 2: Collaboration and code sharing with GitHub, resolving conflicts
 * Week 3 (optional): git workflow on the command line

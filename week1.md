@@ -119,6 +119,18 @@
 * can ignore entire directories, or use wildcards to indicate types of files
 
 
+## Branches
+
+* branch: a parallel version of the “master” repository that allows you to test changes without affecting the original (or live) version; changes in a branch can be merged back to the “master” when a particular task has been completed
+* why use branches?
+	* when working collaboratively, someone else may want to try something but you need to keep working without seeing their changes
+	* you may want to try something that has a chance of not working, and you don't want to risk having to undo a bunch of stuff
+* create new branch called "wacky-branch"
+* add some data files, commit
+* show original branch and note files aren't there (also show on Desktop!)
+* merge branches and show history
+* deleting old branch: when on branch, menu option (note that branch is completely gone forever!)
+
 ## Wrapping up
 
 * review objectives
