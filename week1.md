@@ -7,24 +7,29 @@
 
 ## Introductions
 
-* introduce myself
-* refer to materials for course
-* informal pre-class survey:
-	* PhD comic: http://phdcomics.com/comics.php?f=1531: who wants a better way?
+* instructor introduction
+* sign in using link on HackMD page
+* overview of fredhutch.io
+* overview course philosophy
+*   designed for researchers who are interested in version control for code or data
+*   follow along with coding activities, try the challenges
+* pre-requisites: none, except Unix useful for third week
+* learner introductions and motivation
 	* who's used Git or GitHub before?
+* course objectives: desktop app, GitHub, command line to integrate both
+
 
 ## Objectives
 
-* course overview: desktop app, GitHub, command line to integrate both
-* objectives:
-	* describe why and when to use version control
-	* apply git workflow to tracking changes using GitHub Desktop app
-	* view and recall history of tracked changes
-	* ignore files that don't need to be in repository
+* describe why and when to use version control
+* apply git workflow to tracking changes using GitHub Desktop app
+* view and recall history of tracked changes
+* ignore files that don't need to be in repository
 
 
 ## Intro to version control
 
+* Software Carpentry lessons have nice images: PhD comic for motivation, then diagrams showing how version control works: http://swcarpentry.github.io/git-novice/01-basics/index.html
 * why version control?
 	* other places version control is used: MS Word "track changes", Google Docs versions, Mac OSX Time Machine
 	* version control (and git) can be used for anything, but is especially important for code
@@ -48,11 +53,12 @@
 
 ## Creating a repository
 
-* What is a repository? analogy of a book in a library
+* What is a repository? a project folder including all files and their history as tracked with Git. A repository can represent a variety of projects, including a piece of software, quarterly report, or research manuscript
+* analogy of repository as a book in a library
 * File -> new repository
 	* name: first_repository
 	* description: brief (>10 word) statement describing purpose
-	* local path: location where it will be saved (recommended Desktop or Documents)
+	* local path: location where it will be saved (recommended Desktop)
 	* Click box to "initialize this repository with a README"
 	* Click "Create repository" to finish
 * What happened?
@@ -105,6 +111,7 @@
 * SHA: Secure Hash Algorithm
 	* string of alphanumeric characters, unique label for the commit
 	* can be just the first seven characters
+* "Discard changes" allows you to reset to where you were previously
 
 
 ## Ignoring things
@@ -118,6 +125,18 @@
 	* preview concerns with managing large data files or secure info
 * can ignore entire directories, or use wildcards to indicate types of files
 
+
+## Branches
+
+* branch: a parallel version of the “master” repository that allows you to test changes without affecting the original (or live) version; changes in a branch can be merged back to the “master” when a particular task has been completed
+* why use branches?
+	* when working collaboratively, someone else may want to try something but you need to keep working without seeing their changes
+	* you may want to try something that has a chance of not working, and you don't want to risk having to undo a bunch of stuff
+* create new branch called "wacky-branch"
+* add some data files, commit
+* show original branch and note files aren't there (also show on Desktop!)
+* merge branches and show history
+* deleting old branch: when on branch, menu option (note that branch is completely gone forever!)
 
 ## Wrapping up
 

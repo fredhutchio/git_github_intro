@@ -5,7 +5,8 @@
 * set up shell:
 	* enlarge text size
 	* `export PS1='$ '`
-	* `export PROMPT_COMMAND="history 1 >> PATH/TO/GitHistory.txt"`
+	* `export PROMPT_COMMAND="history 1 >> ~/Dropbox/GitHistory.txt"`
+	* share in HackMD
 * check installation of command line version
 	* Terminal, Git for Windows
 	* `git --help` should print help documentation
@@ -20,7 +21,7 @@
 * removing a file completely from git log
 
 
-## SETUP
+## Setup
 
 * why use git on command line?
 	* there are some tasks you can't accomplish with GitHub Desktop
