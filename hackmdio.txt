@@ -16,6 +16,7 @@ If you have feedback about this course, please
 
 **Week 1: git workflow with GitHub Desktop App**
 * Additional help documentation: [Getting started with GitHub Desktop](https://help.github.com/desktop/guides/getting-started-with-github-desktop/)
+* Git and GitHub help documentation: https://guides.github.com
 * Git/GitHub link from [FH Biomedical Data Science Wiki](https://sciwiki.fredhutch.org/bioinformatics/compute_github/)
 * [Instructor notes](https://github.com/fredhutchio/git_github_intro/blob/master/1GitDesktop.md)
 
