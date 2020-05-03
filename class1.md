@@ -13,7 +13,7 @@
 * overview course philosophy
 *   designed for researchers who are interested in version control for code or data
 *   follow along with coding activities, try the challenges
-* pre-requisites: none, except Unix useful for third week
+* pre-requisites: none, except Unix useful for third class
 * learner introductions and motivation
 	* who's used Git or GitHub before?
 * course objectives: desktop app, GitHub, command line to integrate both
@@ -142,4 +142,4 @@
 
 * review objectives
 * short demo of Git Kraken, RStudio interface, Atom
-* preview next week
+* preview next class

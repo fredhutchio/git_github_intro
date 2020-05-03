@@ -4,7 +4,7 @@
 
 ## Objectives
 
-* review previous week's materials
+* review previous class materials
 * today's objectives:
 	* differentiate between local and remote repositories
 	* use GitHub to publish your own code/data
@@ -35,7 +35,7 @@
 
 ## Publishing a local repository
 
-* using repository from last week, review Git workflow using Desktop app (can use instructor's if you deleted yours)
+* using repository from last class, review Git workflow using Desktop app (can use instructor's if you deleted yours)
 * Use "Publish repository" button in center of app to initialize new repo in GitHub
 	* uncheck "keep code private"
 * view repo on GitHub; locate history and compare to desktop app
@@ -122,5 +122,5 @@
 ## Wrapping up
 
 * review today's objectives
-* preview next week: optional, but need additional tools if coming (see fredhutch.io website)
+* preview next class: optional, but need additional tools if coming (see fredhutch.io website)
 * link to comment box
