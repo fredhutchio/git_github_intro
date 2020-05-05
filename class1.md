@@ -64,21 +64,73 @@ have well-developed help documentation and a large community of users to assist 
 This class will give you a basic introduction to the general Git workflow to track changes to files.
 There are many additional resources available online through [GitHub](https://help.github.com/en/github) to help you along the way.
 
+## Getting set up
+
+We'll get started by checking to make sure GitHub Desktop has installed appropriately
+and has relevant settings correctly assigned.
+
+First, open GitHub Desktop.
+If you are on a Windows machine and have also installed Git for Windows,
+please make sure you're opening the correct application.
+The icon for GitHub Desktop show the silhouette of the GitHub mascot,
+Octocat (octopus cat):
+
+![GitHub Desktop icon with Octocat](images/octocat.jpeg)
+
+Next,
+go to the toolbar at the top and select "GitHub Desktop"
+and then "Preferences."
+You should now be able to see the Preferences pop-up window.
+Let's check the settings in the following tabs:
+
+- "Accounts":
+ you should see your GitHub handle
+ (begins with `@`)
+ and name below "GitHub.com".
+ If not, please sign in using your account information.
+- "Integrations": this is where you can select a default text editor for opening files.
+ It is not essential to have this set,
+ but may be convenient.
+ The [installation instructions](http://www.fredhutch.io/software/#course-specific-software-requirements) recommended Atom.
+ In general,
+ the default text editors on your computers
+ (Notepad, TextEdit) will not work well for writing code.
+- "Appearance": select the Dark theme if you prefer.
+
+ There are other options available under "Advanced",
+ you can consider changing these once you have more familiarity with version control
+ and your particular needs.
+
 ## Creating a repository
 
-* reference: https://help.github.com/desktop/guides/getting-started-with-github-desktop/
-* open GitHub Desktop app (make sure this is the right one!)
-* check Preferences: Accounts, Advanced (external editor)
+If you have taken Intro to R or Intro to Python through fredhutch.io,
+you should be familiar with projects as a way to organize your work,
+with projects representing things like a chapter of a thesis/dissertation,
+analysis for a manuscript, or a monthly report.
 
-* What is a repository? a project folder including all files and their history as tracked with Git. A repository can represent a variety of projects, including a piece of software, quarterly report, or research manuscript
-* analogy of repository as a book in a library
-* File -> new repository
-	* name: first_repository
-	* description: brief (>10 word) statement describing purpose
-	* local path: location where it will be saved (recommended Desktop)
-	* Click box to "initialize this repository with a README"
-	* Click "Create repository" to finish
-* What happened?
+Git tracks changes associated with repositories.
+A repository is a project folder containing all the files,
+including code and data, associated with a particular unit of work,
+as well as the history of changes associated with those files.
+
+> If you'd like another explanation of creating a repository,
+> [these instructions](https://help.github.com/en/desktop/getting-started-with-github-desktop/creating-your-first-repository-using-github-desktop)
+> from GitHub will walk you through the process using the
+> "Create a tutorial repository and clone it" option in GitHub Desktop.
+
+We'll get started with our first repository by clicking the button for
+"Create a New Repository on your Hard Drive."
+You can also access this feature under "File" -> "New repository".
+Enter the following options:
+- Name: `first_repository`
+- Description: "first repository for training".
+The description should be a brief (>10 word) statement describing the purpose of the project
+- Local path: location on your computer where the repository will be saved.
+We recommend saving your repository to your Desktop so it's easy to find.
+- Check the box to "initialize this repository with a README"
+- Click "Create repository" to finish
+
+What happened?
 	* Use file browser to find location in your computer where repository is saved
 	* What's in this folder?
 * README: plain text file, open in text editor
