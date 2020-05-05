@@ -1,4 +1,4 @@
-class# Introduction to Git and GitHub
+# Introduction to Git and GitHub
 
 ## Description
 
@@ -14,7 +14,7 @@ This two-class course (with optional third class session) is designed to introdu
 
 ## Resources
 
-* Each set of class materials are described in the file prefaced with the number of the class.
+* Each set of class materials are described in the relevant `class*.md` file.
 * `instructors.md` includes information for instructors to facilitate teaching each lesson
 * `hackmdio.md` is an archive of the [interactive webpage](https://hackmd.io) used during lessons
-* Information about use of R and RStudio at Fred Hutch is available on the [Data Science Wiki](https://sciwiki.fredhutch.org/scicomputing/software_R/)
+* Information about use of Git and GitHub at Fred Hutch is available on the [Data Science Wiki](https://sciwiki.fredhutch.org/scicomputing/software_managecode/)
