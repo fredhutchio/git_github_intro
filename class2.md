@@ -122,5 +122,6 @@
 ## Wrapping up
 
 * review today's objectives
+* short demo of Git Kraken, RStudio interface, Atom
 * preview next class: optional, but need additional tools if coming (see fredhutch.io website)
 * link to comment box

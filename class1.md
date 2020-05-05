@@ -1,30 +1,32 @@
 # Introduction to Git and GitHub: Git Desktop
 
-## Before class
-
-* share URL to hack.md
-* check installation of text editor, GitHub Desktop and GitHub account (need latter to set up former)
-
-## Introductions
-
-* instructor introduction
-* sign in using link on HackMD page
-* overview of fredhutch.io
-* overview course philosophy
-*   designed for researchers who are interested in version control for code or data
-*   follow along with coding activities, try the challenges
-* pre-requisites: none, except Unix useful for third class
-* learner introductions and motivation
-	* who's used Git or GitHub before?
-* course objectives: desktop app, GitHub, command line to integrate both
-
-
 ## Objectives
 
-* describe why and when to use version control
-* apply git workflow to tracking changes using GitHub Desktop app
-* view and recall history of tracked changes
-* ignore files that don't need to be in repository
+Welcome to Introduction to Git and GitHub from fredhutch.io!
+This course is designed for researchers who are interested in version control for code or data files,
+and assumes no prior programming experience.
+There are no prerequisites for this course
+(though see below regarding the optional third class).
+
+This course will introduce you to
+the Git Desktop application to manage version control on your own computer and
+GitHub to publish and collaborate with files tracked in remote repositories.
+The optional third class applies skills from the first two classes using Git on the command line,
+and requires some familiarity with navigating files and directories using the Unix commands.
+
+To complete the activities associated with this course,
+please ensure you have completed the following tasks (additional information can be found [here](http://www.fredhutch.io/software/#course-specific-software-requirements)):
+
+- register for a GitHub account
+- install GitHub Desktop (including the command line tools, if you are on a Windows computer and planning to complete the optional third session)
+- (optional) install a text editor (like Atom or Notepad++)
+
+By the end of this first session, you should be able to use the GitHub desktop app to:
+
+- describe why and when to use version control
+- apply the Git workflow to tracking changes using GitHub Desktop
+- view and recall the history of tracked changes
+- ignore files that don't need to be tracked
 
 
 ## Intro to version control
@@ -137,6 +139,7 @@
 * show original branch and note files aren't there (also show on Desktop!)
 * merge branches and show history
 * deleting old branch: when on branch, menu option (note that branch is completely gone forever!)
+
 
 ## Wrapping up
 
