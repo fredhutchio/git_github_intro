@@ -84,29 +84,37 @@ You should now be able to see the Preferences pop-up window.
 Let's check the settings in the following tabs:
 
 - "Accounts":
- you should see your GitHub handle
- (begins with `@`)
- and name below "GitHub.com".
- If not, please sign in using your account information.
+you should see your GitHub handle
+(begins with `@`)
+and name below "GitHub.com".
+If not, please sign in using your account information.
 - "Integrations": this is where you can select a default text editor for opening files.
- It is not essential to have this set,
- but may be convenient.
- The [installation instructions](http://www.fredhutch.io/software/#course-specific-software-requirements) recommended Atom.
- In general,
- the default text editors on your computers
- (Notepad, TextEdit) will not work well for writing code.
+It is not essential to have this set,
+but may be convenient.
+The [installation instructions](http://www.fredhutch.io/software/#course-specific-software-requirements) recommended Atom.
+In general,
+the default text editors on your computers
+(Notepad, TextEdit) will not work well for writing code.
+If you don't see any text editors available here,
+that's ok!
+You won't be able to use the shortcut to access files from GitHub Desktop,
+but you'll still be able to complete the class activities.
 - "Appearance": select the Dark theme if you prefer.
 
- There are other options available under "Advanced",
- you can consider changing these once you have more familiarity with version control
- and your particular needs.
+There are other options available under "Advanced",
+you can consider changing these once you have more familiarity with version control
+and your particular needs.
 
 ## Creating a repository
 
 If you have taken Intro to R or Intro to Python through fredhutch.io,
-you should be familiar with projects as a way to organize your work,
-with projects representing things like a chapter of a thesis/dissertation,
+you should be familiar with projects as a way to organize your work.
+A project is a single folder containing the files associated with a unit work work,
+like a chapter of a thesis/dissertation,
 analysis for a manuscript, or a monthly report.
+
+> "Folder" and "directory" will be used interchangeable for the purposes of this lesson.
+> Similarly, "project" and "repository" are generally analogous for our purposes.
 
 Git tracks changes associated with repositories.
 A repository is a project folder containing all the files,
@@ -122,28 +130,51 @@ We'll get started with our first repository by clicking the button for
 "Create a New Repository on your Hard Drive."
 You can also access this feature under "File" -> "New repository".
 Enter the following options:
+
 - Name: `first_repository`
 - Description: "first repository for training".
 The description should be a brief (>10 word) statement describing the purpose of the project
 - Local path: location on your computer where the repository will be saved.
-We recommend saving your repository to your Desktop so it's easy to find.
+We recommend saving your repository to your Desktop so it's easy to find,
+and will assume for the rest of this lesson that your repository is available there.
 - Check the box to "initialize this repository with a README"
 - Click "Create repository" to finish
 
-What happened?
-	* Use file browser to find location in your computer where repository is saved
-	* What's in this folder?
-* README: plain text file, open in text editor
-	* documents contents of repository, can describe code and/or data
-	* pre-populated with title of the repository (and short description?)
-	* .md suffix indicates markdown format, which is for text formatting (same as hackmd)
-* What else is in the repo?
-	* use CMD + Shift + . to reveal hidden files
-	* .gitattributes: created by app to maintain line endings, which can differ between operating systems
-	* .git directory: contains tracking of changes as recorded by git software
-	* entire directory is a unit
-* Challenge: Why would it be a bad idea to create another git repository inside this directory?
+> It's good practice to avoid spaces in your file and directory names.
+> We'll continue to apply best practices and convention for organizing files and directories for this class;
+> if you're interested in the rationale,
+> please see fredhutch.io's class Data for Data Science.
 
+We can explore what happens following creation of a repository,
+sometimes called "initializing,"
+by looking on your Desktop and locating the directory named `first_repository`.
+
+The only file we can see contained in this directory is `README.md`,
+a plain text file we can open in a text editor.
+The file suffix `md` stands for Markdown,
+which is a method of formatting text.
+README is a standard name for a descriptive file contained in a repository,
+and documents the contents of the directory.
+In our case,
+the README is pre-populated with the title of the repository
+and short description we entered when creating it.
+
+`README.md` is the only file we can currently see,
+but there is other information contained in our repository.
+This other information is currently hidden,
+but we can access it by using a keyboard shortcut: `CMD + Shift + .`.
+There are two additional things now visible:
+- `.gitattributes`: this text file is created by GitHub Desktop to help ensure appropriate settings (e.g., line endings for text files, which can differ among operating systems).
+- `.git/`: directory containing the history of changes tracked by Git
+
+The `.git/` directory is how Git recognizes your project represents a repository,
+and assumes you want to track all of the files contained within it.
+Git tracking is recursive,
+meaning not only the files in your project,
+but all the files contained in folders in that directory can be tracked as well.
+
+**Challenge:** What would happen if you tried to create a new Git repository
+inside another Git repository?
 
 ## Tracking changes
 
