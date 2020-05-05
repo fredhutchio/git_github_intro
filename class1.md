@@ -2,23 +2,24 @@
 
 ## Objectives
 
+Welcome to Introduction to Git and GitHub from fredhutch.io!
+This course is designed for researchers who are interested in version control for code or data files,
+and assumes no prior programming experience.
+There are no prerequisites for this course
+(though see below regarding the optional third class).
+
+This course will introduce you to
+the Git Desktop application to manage version control on your own computer and
+GitHub to publish and collaborate with files tracked in remote repositories.
+The optional third class applies skills from the first two classes using Git on the command line,
+and requires some familiarity with navigating files and directories using the Unix commands.
+
 To complete the activities associated with this course,
 please ensure you have completed the following tasks (additional information can be found [here](http://www.fredhutch.io/software/#course-specific-software-requirements)):
 
 - register for a GitHub account
 - install GitHub Desktop (including the command line tools, if you are on a Windows computer and planning to complete the optional third session)
 - (optional) install a text editor (like Atom or Notepad++)
-
-This course is designed for researchers who are interested in version control for code or data files,
-and assumes no prior programming experience.
-There are no prerequisites for this course
-(though see below regarding the optional third class).
-
-By the end of the course, you should be able to:
-
-- use Git Desktop to manage version control on your own computer
-- publish and collaborate with files tracked in remote repositories on GitHub
-- (optional, requires some familiarity with navigating files and directories using the Unix command line) apply skills from the first two sessions using Git on the command line
 
 By the end of this first session, you should be able to use the GitHub desktop app to:
 
