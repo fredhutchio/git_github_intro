@@ -29,31 +29,46 @@ By the end of this first session, you should be able to use the GitHub desktop a
 - ignore files that don't need to be tracked
 
 
-## Intro to version control
+## What is version control?
 
-* Software Carpentry lessons have nice images: PhD comic for motivation, then diagrams showing how version control works: http://swcarpentry.github.io/git-novice/01-basics/index.html
-* why version control?
-	* other places version control is used: MS Word "track changes", Google Docs versions, Mac OSX Time Machine
-	* version control (and git) can be used for anything, but is especially important for code
-	* code is like a list of instructions, in which changes may have unexpected consequences elsewhere in the code
-	* working across complex code may require being able to interpret which changes affect other parts downstream, many changes later
-	* knowing what code works at which point in time and what changes to the code may have caused problems is what version control allows us to manage
-	* simplest case: a single document, make changes to code, then make more changes
-	* more complex case: multiple copies of a document, with different changes made to each that need to be reconciled.
-* git: version control software (there are many others)
-* GitHub: online code repository for publishing/sharing code and/or data (there are others)
-* using git and GitHub because they are currently popular for academic and industry groups, many folks on campus are using them
-* lots of help documentation about git and GitHub, so today is a crash course and brief overview of functionality
+Jorge Chan's [PhD Comics](http://phdcomics.com) illustrates why you might be interested in version control:
 
+![final.doc from PhD Comics](images/phd101212s.gif)
 
-## Setup
+In fact,
+you may already be familiar with the use of version control,
+through:
+
+- Microsoft Word's "track changes" option
+- Google Docs version history
+- Mac OSX Time Machine
+
+Version control is used to record changes to all types of files,
+but is especially important for code.
+This is because changes made to code may have consequences for other parts of the file or project,
+and being able to understand where changes caused problems is especially important.
+
+In the simplest case,
+version control allows you to identify what changes have occurred in a single file over time,
+such as edits to a written document made by one person over time.
+In more complex cases,
+you may possess multiple copies of the same document,
+with multiple individuals making changes at the same time,
+some of which may be inconsistent with each other and need to be reconciled.
+[Git](https://git-scm.com/about) is software that allows you to perform version control.
+[GitHub](https://help.github.com/en/github) is website for publishing and sharing projects that are tracked using Git.
+Git and GitHub are a very popular set of tools used by both academic and commercial organizations,
+and correspondingly,
+have well-developed help documentation and a large community of users to assist in their use.
+
+This class will give you a basic introduction to the general Git workflow to track changes to files.
+There are many additional resources available online through [GitHub](https://help.github.com/en/github) to help you along the way.
+
+## Creating a repository
 
 * reference: https://help.github.com/desktop/guides/getting-started-with-github-desktop/
 * open GitHub Desktop app (make sure this is the right one!)
 * check Preferences: Accounts, Advanced (external editor)
-
-
-## Creating a repository
 
 * What is a repository? a project folder including all files and their history as tracked with Git. A repository can represent a variety of projects, including a piece of software, quarterly report, or research manuscript
 * analogy of repository as a book in a library
@@ -143,6 +158,11 @@ By the end of this first session, you should be able to use the GitHub desktop a
 
 ## Wrapping up
 
-* review objectives
-* short demo of Git Kraken, RStudio interface, Atom
-* preview next class
+This class introduced you to version control using Git Desktop.
+We covered the general Git workflow,
+its implementation using GitHub Desktop,
+working with the tracked history,
+and ignoring files that don't need to be tracked.
+
+In the next class,
+we'll learn about publishing repositories and collaborating using remote repositories in GitHub.
