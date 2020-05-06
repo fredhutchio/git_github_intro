@@ -1,24 +1,20 @@
-# Introduction to Git and GitHub: Git on the command line
-
-##  Before class:
-
-* set up shell:
-	* enlarge text size
-	* `export PS1='$ '`
-	* `export PROMPT_COMMAND="history 1 >> ~/Dropbox/GitHistory.txt"`
-	* share in HackMD
-* check installation of command line version
-	* Terminal, Git for Windows
-	* `git --help` should print help documentation
-
+# Introduction to Git and GitHub Class 3: Git on the command line
 
 ## Objectives
 
-* transfer knowledge from GUI to command line
-* practice git workflow (modify-add-commit)
-* update local repo with a remote repo owned by someone else
-* cherrypicking
-* removing a file completely from git log
+The first two classes in this course have provided a general overview of version control using Git for both local repositories using GitHub Desktop and remote repositories using GitHub.
+
+This class will provide an overview of command line operations using Git.
+By the end of this class,
+you should be able to:
+
+- transfer Git knowledge from GUIs to the command line
+- apply the basic git workflow (modify-add-commit)
+- understand how to perform Git tasks that may be difficult or impossible to apply with a GUI,
+such as:
+	- updating a local repository with a remote repository owned by someone else
+ 	- cherrypicking
+ 	- removing a file completely from git log
 
 
 ## Setup
