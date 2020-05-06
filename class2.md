@@ -1,17 +1,28 @@
-# Introduction to Git and GitHub: GitHub
-
-* XKCD comic: https://xkcd.com/1296/
+# Introduction to Git and GitHub Class 2: GitHub
 
 ## Objectives
 
-* review previous class materials
-* today's objectives:
-	* differentiate between local and remote repositories
-	* use GitHub to publish your own code/data
-	* contribute to someone else's repository using GitHub
+In the last class,
+we used the GitHub Desktop application to work with version control on our own computers by creating repositories,
+tracking changes using the basic Git workflow (modify-add-commit),
+exploring history,
+and ignoring files.
+
+Today, we'll transfer this knowledge to remote repositories in GitHub.
+By the end of this class,
+you should be able to:
+
+- differentiate between local and remote repositories
+- use GitHub to publish your own code/data
+- contribute to someone else's repository using GitHub
 
 
 ## Introduction to GitHub
+
+Now that you have some experience with version control using Git,
+you may be able to appreciate this cartoon from [XKCD](https://xkcd.com):
+
+![XKCD Git](https://imgs.xkcd.com/comics/git_commit.png)
 
 * differentiating between Git and GitHub:
 	* local repository: only available on your own hardware (computer)

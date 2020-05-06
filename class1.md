@@ -1,4 +1,4 @@
-# Introduction to Git and GitHub: Git Desktop
+# Introduction to Git and GitHub Class 1: Git Desktop
 
 ## Objectives
 
@@ -178,19 +178,59 @@ inside another Git repository?
 
 ## Tracking changes
 
-* overview of text editors and why to use them
-* add note to README and save
-* what happens in app?
-	* "Changes" tab in left panel shows what files have been altered: saved on computer, but not tracked by git yet
-	* panel on right side shows what changes have occurred: green for additions, red for removals
-	* check marks next to files indicate what is slated to be added to repository and tracked by git
-	* if you uncheck files, you can't make a commit (no changes)
+Now that we have created a Git repository,
+we're ready to start learning about using Git to track files.
+
+Although Git can track files of any type,
+we'll be working with text files in this course,
+as these files are relatively simple and will allow us to easily control and view the changes we make.
+
+> If you're accustomed to view text in word processing software like Microsoft Word,
+> it can be an adjustment to viewing text in a text editor instead.
+> The reason we don't use word processing software to write code
+> is because files produced by these programs include lots of other information
+> that controls the formatting and appearance of the documents,
+> which make it difficult (or even impossible) for computers to understand the contents.
+> [This blog post](https://www.techstuffed.com/what-are-text-editors-and-why-are-they-important/)
+> does a good job explaining this in more detail.
+
+Open your `README.md` file from your repository in your text editor (e.g., Atom).
+Add a longer description for the repository to this file:
+
+```
+Example repository used for demonstration purposes in Intro to Git and GitHub from fredhutch.io
+```
+
+Make sure you save the changes,
+then go back to GitHub Desktop.
+What differences do you notice?
+
+The "Changes" tab in left panel shows what files have been altered.
+These represent files that have been saved on the computer,
+but are not yet tracked by Git.
+The panel on the right shows what changes have occurred,
+and are documented by lines of code
+(in our case, this corresponds to text):
+green indicates content that has been added,
+red indicate content that has been removed.
+A check mark next to a file indicates what is slated to be added to repository,
+which means it will be tracked by Git.
+If you uncheck the file,
+you won't be able to make a commit,
+as Git doesn't recognize any changes.
+
 * to track by git, need to commit!
 	* at bottom of left panel, add summary (brief, <50 characters)
 	* longer description may be useful for more complex sets of changes
 	* click button for "commit to master", where "master" refers to the branch (we'll talk more about this later, but master is default)
 * git workflow: save changes, make sure box is checked, commit
 	* edit file again (right click to "Open in Atom"), commit changes
+
+> Git tracks entire lines of code.
+> This means that changes made to a previously existing line will appear
+> as a deletion of the original line,
+> and addition of the new line.
+
 	* create new file named notes.txt in text editor, add brief content, commit changes
 	* relate to shopping cart analogy
 * Challenge:
