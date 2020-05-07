@@ -9,7 +9,11 @@ By the end of this class,
 you should be able to:
 
 - transfer Git knowledge from GUIs to the command line
-- apply the basic git workflow (modify-add-commit)
+- apply the basic git workflow:
+	- modify-add-commit
+	- ignoring files
+	- connecting local and remote repositories
+	- working with branches
 - understand how to perform Git tasks that may be difficult or impossible to apply with a GUI,
 such as:
 	- updating a local repository with a remote repository owned by someone else
@@ -290,10 +294,12 @@ View all ignored files:
 * `git merge testing master`
 * Delete old branch
 
+##
 
-## Updating local repositories with a remote repo owned by someone else
+### Updating local repositories with a remote repo owned by someone else
+
 * Change added to guacamole repo
-* get URL to fredhutch.io/guacamole
+* obtain URL to fredhutch.io/guacamole
 * git remote add upstream URL (set remote)
 * git remote -v (check)
 * git fetch upstream (fetch updates)
@@ -301,9 +307,17 @@ View all ignored files:
 * git merge upstream/master (add upstream changes without losing local changes)
 
 
-## Cherrypicking: merging only some commits from one branch into another
-https://www.previousnext.com.au/blog/intro-cherry-picking-git
-Related: git rebase -i SHA https://blog.github.com/2015-06-08-how-to-undo-almost-anything-with-git/
+### Working with Git history
+
+[Cherrypicking](https://www.previousnext.com.au/blog/intro-cherry-picking-git) refers to merging only some commits from one branch into another
+
+
+[Rebasing](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase): moving or combining a sequence of commits to a new base commit.
+
+
+[Rebasing from a specific commit](https://blog.github.com/2015-06-08-how-to-undo-almost-anything-with-git/)
+
+		git rebase -i SHA
 
 
 ## Wrapping up
