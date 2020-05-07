@@ -17,7 +17,7 @@ such as:
  	- removing a file completely from git log
 
 The following materials assume you have some familiarity with navigating files and directories on the command line.
-We'll also be editing files using `nano`,
+We'll also be editing files using [`nano`](https://www.howtogeek.com/howto/42980/the-beginners-guide-to-nano-the-linux-command-line-text-editor/),
 though you're welcome to use a different text editor if you prefer.
 
 
@@ -93,40 +93,117 @@ Note that the output here includes multiple comments that can helpfully identify
 
 ## Tracking changes
 
-* create new file: `touch code.txt`
-* open in text editor or use `nano code.txt` or `vi code.txt`
-	* add text, exit and save
-	* `ls`, `cat code.txt`
-* show status of project: `git status`
-	* "untracked files": there's something not being tracked
-* add file: `git add code.txt`
-* `git status` "Changes to be committed": it's tracking, but the changes aren't recorded
-* commit file: `git commit -m "creating code file"`
-	* commits record to history in .git, called a revision, with short identifier
-	* run without -m and will open editor to add comment (you've specified your preference earlier today)
-	* good commits: brief (<50 characters), for more info, add empty line (adds in separate field)
-* `git status`
-* check history: `git log`
-	* lists all revisions in reverse chronological order: full identifier (relate to short identifier, same initial characters),
-	* when created, log message
-* make another change (this is just one way): `vi code.txt`, `cat code.txt`
-* check status: `git status`
-* look at differences: `git diff`
-	* first line: old and new version of files, similar to diff command in Unix
-	* second line: labels for revisions
-	* third and fourth: name of file changing
-	* last lines: actual changes
-* commit changes: `git commit -m "adding change"`
-* but change hasn't been added!: `git add`, `git commit`
-* working through staging
-* new file: `vi data.txt`
-* look at differences: `git diff`
-* stage file: `git add data.txt`, `git diff` (no output)
-* `git diff –-staged` (shows differences)
-* `git commit -m`, `git status`, `git log`
-* git commit workflow
-* Challenge: What commands would you use to save the changes of a new file, `test.txt`, to your local Git repo?
-* Challenge: Create a new Git repository on your computer called bio; Write a three-line biography for yourself in a file called me.txt, commit your changes; Modify one line, add a fourth line; Display the differences between its updated state and its original state.
+Now that we have a repository,
+we can begin creating and tracking files.
+
+First,
+create a new file to edit in `nano`:
+
+		nano code.sh
+
+> Here we're using the suffix of `.sh`
+> to suggest we are working with a shell script,
+> though we won't actually be running any scripts today.
+
+In the editor,
+enter a title for the file:
+
+		# Simple shell script
+
+Save the file as you exit the editor.
+
+We can confirm this change:
+
+		ls
+		cat code.sh
+
+Next, show the status of the project:
+
+		git status
+
+There is new output here,
+indicating there are files present,
+but not yet tracked with Git.
+
+We can add our file:
+
+		git add code.txt
+
+Check status:
+
+		git status
+
+"Changes to be committed" indicate there are files staged,
+but not yet included in the version history for this repository.
+We can commit this file:
+
+		git commit -m "creating code file"
+
+The option `-m` indicates that you are entering a comment for the commit on the command line.
+Running `git commit` alone will open your default text editor so you can add a comment there.
+Remember that good commits are brief (<50 characters); if you'd like to add more text,
+add an empty line (two hard returns)
+and then you can include more text.
+
+Now we can view our repository's history:
+
+		git log
+
+This lists all revisions in reverse chronological order,
+including the full SHA identifier (same initial characters as the short identifier we've been seeing).
+
+Make another change to `code.sh`.
+Look at the difference between the version history and the untracked changes:
+
+		git diff
+
+In this output, you should see:
+
+- first line: old and new version of files, similar to `diff` command in Unix
+- second line: labels for revisions
+-	third and fourth: name of file changing
+-	last lines: actual changes
+
+Go ahead and commit these changes:
+
+		git commit -m "adding change"
+
+But remember,
+you haven't yet stage this file!
+You need to:
+
+		git add
+		git commit
+
+This represents the general Git workflow of
+*modify, add, commit*.
+
+If we create a new, empty file:
+
+ 		touch data.txt
+
+We can view the difference with the version history:
+
+		git diff
+
+If we then stage the file,
+we won't be able to view the differences using that same command:
+
+		git add data.txt
+		git diff
+
+We can, however,
+add an option that will allow us to view these changes:
+
+		git diff –-staged
+
+**Challenge:** Commit this last file and view the commit history.
+
+
+**Challenge:** Create a new Git repository on your computer called `bio/`.
+Write a three-line biography for yourself in a file called me.txt.
+Commit your file, then modify one line and add a fourth line.
+Display the differences between this file's updated state and its original state.
 
 
 ## Exploring history
