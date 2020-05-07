@@ -199,7 +199,6 @@ add an option that will allow us to view these changes:
 
 **Challenge:** Commit this last file and view the commit history.
 
-
 **Challenge:** Create a new Git repository on your computer called `bio/`.
 Write a three-line biography for yourself in a file called me.txt.
 Commit your file, then modify one line and add a fourth line.
@@ -229,15 +228,36 @@ Display the differences between this file's updated state and its original state
 ## Ignoring things
 
 * sometimes backup files are created by other programs, or intermediate files we don't want to track
-* create dummy files
-* `mkdir results`, `touch a.dat b.dat c.dat results/a.out results/b.out`
-* `git status`: lots of stuff needs to be committed, but we don't want to!
-* `vi .gitignore`, add `*.dat` and `results/`
-* `git status`: now .gitignore is the only thing there!
-* `git add .gitignore`, `git commit -m “add ignore file”`, `git status`
-* `git add a.dat`: error
-* `git status --ignored`
-* Challenge: Ignoring files that have already been committed retains the file in the git log. How could we remove these completely from the repo? https://help.github.com/articles/removing-sensitive-data-from-a-repository/
+* create dummy files:
+
+		mkdir results
+		touch temp.dat output.dat results/a.txt results/b.txt
+		git status
+
+Lots of stuff needs to be committed, but we don't want to!
+		nano .gitignore`
+
+Then add the following content to the file:
+
+		temp.dat
+		results/
+		git status
+
+What files remain to be tracked?
+
+		git add .gitignore output.dat
+		git commit -m “add ignore file”
+		git status
+
+What happens if we try to now add an ignored file?
+
+		git add a.dat
+
+View all ignored files:
+
+		git status --ignored
+
+**Challenge:** Ignoring files that have already been committed retains the file in the git log. How could we remove these completely from the repo? https://help.github.com/articles/removing-sensitive-data-from-a-repository/
 
 
 ## Publishing local repository to GitHub
