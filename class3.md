@@ -16,6 +16,10 @@ such as:
  	- cherrypicking
  	- removing a file completely from git log
 
+The following materials assume you have some familiarity with navigating files and directories on the command line.
+We'll also be editing files using `nano`,
+though you're welcome to use a different text editor if you prefer.
+
 
 ## Getting started
 
