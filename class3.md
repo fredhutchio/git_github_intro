@@ -58,18 +58,37 @@ We'll continue applying this syntax throughout the rest of today's class.
 
 ## Creating a local repository
 
-* `cd`
-* `mkdir git_command_line`
-* `cd git_command_line`
-* tell git where to store old records and versions of file
-	* `git init`
-* list everything (including hidden files)
-	* `ls -a`
-* result is a subdirectory with information about project
-* if this is removed, we don't have access to versioning anymore
-* ask status of project
-* `git status`
-* output also adds helpful comments
+We'll begin by creating a new directory to initialize.
+First, ensure you are working in your home directory:
+
+		cd
+
+Then create a new, empty directory called "git_command_line"
+and navigate inside it:
+
+		mkdir git_command_line
+		cd git_command_line
+
+Next, initialize your new directory:
+
+		git init
+
+This instructs git to create `.git/`
+in your working directory,
+which is the location for records of previous file versions:
+
+		git init
+
+We can view this file by listing everything in the directory,
+including hidden files:
+
+		ls -a
+
+Finally, we can see the current status of the Git tracking for this directory:
+
+		git status
+
+Note that the output here includes multiple comments that can helpfully identify further commands.
 
 
 ## Tracking changes
