@@ -17,16 +17,40 @@ such as:
  	- removing a file completely from git log
 
 
-## Setup
+## Getting started
 
-* why use git on command line?
-	* there are some tasks you can't accomplish with GitHub Desktop
-	* working on a remote computer (command line only)
-	* doing work on command line already and you don't want to switch windows
-* check configuration (most should've been set by Git Desktop)
-	* `git config –-list`
-* syntax for git: `git VERB`
+There are a few reasons you may choose to use the command line instead of one of the various GUIs to perform version control:
 
+- You are already working on the command line and you don't want to switch programs
+- You are working on a remote computer (cloud or HPC) and only have access to the command line
+- You want to perform a task that isn't possible using a GUI
+
+Go ahead and open the program you'll be using to run Git on the command line:
+
+- Mac: Terminal, which can be found using the "Go" menu at the top of the screen,
+then selecting "Utilities".
+- Windows: Git for Windows installs an application called Git Bash,
+which emulates the command line.
+
+We've already been working with Git on our local computers,
+so we should be set up and prepared to work on the command line
+since the same settings apply globally
+(e.g., across the entire computer).
+We can double check our configuration and ensure our command line tools are working appropriately using the following command:
+
+		git config –-list
+
+This should show relevant details,
+like the user name and email,
+associated with any future Git commits.
+
+This also introduces the basic syntax for Git:
+
+		git VERB
+
+In this case, `VERB` represents some action (submodule)
+associated with running various Git functions.
+We'll continue applying this syntax throughout the rest of today's class.
 
 ## Creating a local repository
 
