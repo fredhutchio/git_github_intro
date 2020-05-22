@@ -1,4 +1,5 @@
-# Introduction to Git and GitHub Class 2: GitHub
+# Introduction to Git and GitHub
+# Class 2: GitHub
 
 ## Objectives
 
@@ -24,15 +25,19 @@ you may be able to appreciate this cartoon from [XKCD](https://xkcd.com):
 
 ![XKCD Git](https://imgs.xkcd.com/comics/git_commit.png)
 
-* differentiating between Git and GitHub:
-	* local repository: only available on your own hardware (computer)
-	* remote repository: available on someone else's computer and visible to other people
-* overview of GitHub
-	* private vs public repos
-	* log in not necessary to view public repos
-	* when logged in, can see timeline/newsfeed
-	* starring repositories, following people
-	* settings on personal page
+In our previous class,
+we focused on git for local repositories,
+or version control for files and directories located on our own computers.
+In this class,
+we'll expand our understanding of version control to include working with remote repositories vit GitHub.
+
+GitHub is a web-based platform for sharing and collaborating with code and data.
+
+- private vs public repos
+- log in not necessary to view public repos
+- when logged in, can see timeline/newsfeed
+- starring repositories, following people
+- settings on personal page
 * GitHub organizations: fredhutch, fredhutch.io
 	* email scicomp to get added to fredhutch github organization
 	* interact with wiki
@@ -132,7 +137,8 @@ you may be able to appreciate this cartoon from [XKCD](https://xkcd.com):
 
 ## Wrapping up
 
-* review today's objectives
+Today, we explored the use of GitHub to publish our own code/data,
+as well as how to contribute to someone else's repository using GitHub.
+The [GitHub.com help documentation](https://help.github.com/en/github) includes additional examples and illustrations for the tasks we covered today (and more!).
+
 * short demo of Git Kraken, RStudio interface, Atom
-* preview next class: optional, but need additional tools if coming (see fredhutch.io website)
-* link to comment box

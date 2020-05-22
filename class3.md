@@ -1,4 +1,5 @@
-# Introduction to Git and GitHub Class 3: Git on the command line
+# Introduction to Git and GitHub
+# Class 3: Git on the command line
 
 ## Objectives
 
@@ -323,5 +324,6 @@ View all ignored files:
 ## Wrapping up
 
 * review today's objectives
-* preview next week: optional, but need additional tools if coming (see fredhutch.io website)
-* link to comment box
+
+The [documentation for git](https://git-scm.com/docs) includes a complete list of all commands,
+as well as a few options for different cheat sheets.
