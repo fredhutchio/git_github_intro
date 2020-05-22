@@ -1,4 +1,5 @@
-# Introduction to Git and GitHub Class 1: Git Desktop
+# Introduction to Git and GitHub
+# Class 1: GitHub Desktop
 
 ## Objectives
 
@@ -198,7 +199,7 @@ Open your `README.md` file from your repository in your text editor (e.g., Atom)
 Add a longer description for the repository to this file:
 
 ```
-Example repository used for demonstration purposes in Intro to Git and GitHub from fredhutch.io
+Created for Intro to Git and GitHub from fredhutch.io
 ```
 
 Make sure you save the changes,
@@ -219,26 +220,68 @@ If you uncheck the file,
 you won't be able to make a commit,
 as Git doesn't recognize any changes.
 
-* to track by git, need to commit!
-	* at bottom of left panel, add summary (brief, <50 characters)
-	* longer description may be useful for more complex sets of changes
-	* click button for "commit to master", where "master" refers to the branch (we'll talk more about this later, but master is default)
-* git workflow: save changes, make sure box is checked, commit
-	* edit file again (right click to "Open in Atom"), commit changes
+In order for Git to track the file,
+we need to create a commit.
+You can accomplish this task in the lower left hand panel of GitHub Desktop.
+Above the blue "Commit to master" button,
+there are two boxes for text entry.
+The smaller box on top is for the main commit summary,
+which should be brief (<50 characters).
+Use the second box to enter longer descriptions,
+which may be useful for more complex sets of changes.
+After you've entered a meaninginful message,
+click the button to "Commit to master", where "master" refers to the default branch (we'll talk more about branches later).
+
+This represents the basic Git workflow:
+
+- save changes to a file (for example, in a text editor)
+- stage the file to ensure it will be added to the repository (checking the box in GitHub Desktop)
+- commit the change (click the "Commit to master" button)
+
+This may seem like a complex process,
+but it helps to think about it like shopping at a grocery store.
+Saving changes to a file is like deciding to select something from the grocery shelf.
+Staging the changes to add to your repository is like placing the item in your cart.
+Commmitting those changes is like completing the purchase of all items in your cart.
+The items don't really belong to you until the last step of the process.
+
+Let's add another line to our `README.md` file:
+
+```
+Example repository used for demonstration purposes
+```
+
+Don't forget to save and commit this change!
 
 > Git tracks entire lines of code.
 > This means that changes made to a previously existing line will appear
 > as a deletion of the original line,
 > and addition of the new line.
 
-	* create new file named notes.txt in text editor, add brief content, commit changes
-	* relate to shopping cart analogy
-* Challenge:
-	* create new file named analysis.txt, add content, save, and commit
-	* make and save changes to both analysis.txt and notes.txt, commit both at once
-* create folder named data/
-	* can you commit new folder?
-	* create file data1.txt in folder, can you commit now?
+Next, let's create a new file named `notes.txt` in our text editor.
+Add a line of text:
+
+```
+Notes about my analysis
+```
+
+Document the presence of this file in `README.md` by adding the following line:
+
+```
+notes.txt holds notes about the analysis
+```
+
+Commit the changes to both of these files.
+
+#### Challenge-flow
+
+- Create a new file in your project directory named `analysis.txt`.
+Add a line of content to the file and commit it to your repository.
+- Make changes to both `analysis.txt` and `notes.txt`,
+then commit both changes at once.
+- You would like to create a new folder called `data/`,
+which will hold two new data files (`data1.txt` and `data2.txt`).
+What happens when you try to commit an empty folder?
 
 
 ## Exploring history
@@ -286,6 +329,8 @@ We covered the general Git workflow,
 its implementation using GitHub Desktop,
 working with the tracked history,
 and ignoring files that don't need to be tracked.
+For more information on using GitHub Desktop,
+the [GitHub help documentation](https://help.github.com/en/desktop) includes lots of great explanations and illustrations for a variety of uses.
 
 In the next class,
 we'll learn about publishing repositories and collaborating using remote repositories in GitHub.
