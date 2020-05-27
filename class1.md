@@ -174,8 +174,9 @@ Git tracking is recursive,
 meaning not only the files in your project,
 but all the files contained in folders in that directory can be tracked as well.
 
-**Challenge:** What would happen if you tried to create a new Git repository
-inside another Git repository?
+> #### Challenge-initialize
+> What would happen if you tried to create a new Git repository
+> inside another Git repository?
 
 ## Tracking changes
 
@@ -273,20 +274,26 @@ notes.txt holds notes about the analysis
 
 Commit the changes to both of these files.
 
-#### Challenge-flow
+> #### Challenge-flow
 
-- Create a new file in your project directory named `analysis.txt`.
-Add a line of content to the file and commit it to your repository.
-- Make changes to both `analysis.txt` and `notes.txt`,
-then commit both changes at once.
-- You would like to create a new folder called `data/`,
-which will hold two new data files (`data1.txt` and `data2.txt`).
-What happens when you try to commit an empty folder?
+> - Create a new file in your project directory named `analysis.txt`.
+> Add a line of content to the file and commit it to your repository.
+> - Make changes to both `analysis.txt` and `notes.txt`,
+> then commit both changes at once.
+> - You would like to create a new folder called `data/`,
+> which will hold two new data files (`data1.txt` and `data2.txt`).
+> What happens when you try to commit an empty folder?
 
 
 ## Exploring history
 
-* "Undo" button at bottom of changes tab, can undo one at a time
+Now that we have a series of commits in our repository,
+we're able to look at a few of the basic tools we can use to work with the changes in our commit history.
+
+You may have noticed the "Undo" button at the bottom of the changes tab on the left side of GitHub Desktop.
+This feature allows you to undo the most recent commit,
+similar to the "undo" feature in a word processing program.
+
 * history tab in left panel
 	* shows every time you've committed changes (remember, this is different than each time you hit save on a file)
 	* right click
