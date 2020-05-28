@@ -290,19 +290,59 @@ Commit the changes to both of these files.
 Now that we have a series of commits in our repository,
 we're able to look at a few of the basic tools we can use to work with the changes in our commit history.
 
-You may have noticed the "Undo" button at the bottom of the changes tab on the left side of GitHub Desktop.
+As we saw when we made commits,
+the panel on the left in GitHub Desktop allows us to view changes.
+You may have noticed the "Undo" button at the bottom of the changes tab.
 This feature allows you to undo the most recent commit,
 similar to the "undo" feature in a word processing program.
 
-* history tab in left panel
-	* shows every time you've committed changes (remember, this is different than each time you hit save on a file)
-	* right click
-	* "Revert commit" to go directly back to that point in history: this retains all changes, but undoes the tracking in Git
-* SHA: Secure Hash Algorithm
-	* string of alphanumeric characters, unique label for the commit
-	* can be just the first seven characters
-* "Discard changes" allows you to reset to where you were previously
+While undoing a single commit at a time may be sufficient for some tasks,
+there are certainly other cases for which you're require more control and specificity.
+The history tab (shown next to "Changes" in the left panel)
+includes a list of each commit in your repository's history.
+Clicking on a commit will allow you to view the changes made at that point in history.
 
+If you right click on a commit,
+you'll see a number of new options available.
+One of those allows you to "Revert this commit".
+A revert is similar to undoing a commit,
+but does not remove the actions accomplished from the commit from the version history.
+Instead, reverting inverts the changes made in the selected commit,
+and creates a new commit indicating the reversion has occurred.
+This is preferable to some other ways of working with the history,
+as all changes are still recorded in the repository.
+For more information, we recommend [this article](https://www.atlassian.com/git/tutorials/undoing-changes/git-revert).
+
+Another option you will see for each commit is "Create tag".
+[Tags](https://git-scm.com/book/en/v2/Git-Basics-Tagging) are used to label a specific commit,
+and can be useful for referencing specific points in history in a more straightforward way than SHA (see below).
+
+The next option is "Copy SHA",
+which refers to the Secure Hash Algorithm:
+a string of alphanumeric characters representing a unique label for the commit.
+While the entire string for SHA is quite long,
+it can also be referenced using only the first seven characters.
+
+Now that we've reviewed these options,
+let's apply them:
+
+- In the "History" tab,
+select one of your previous commits and revert the changes.
+Note the creation of a new commit,
+that includes the SHA for the reverted commit.
+- Go back to the "Changes" tab and click the "Undo" button.
+This causes a new change to become visible,
+staging (but not committing) the reverted commit.
+- To return the repository's history to the same state as before we began working with history,
+right click on the changes and select "Discard changes."
+
+While this process doesn't represent a workflow that would be commonplace in Git,
+it has allowed us to see how we can work with a few of the features of Git.
+
+> GitHub Desktop is great for working with relatively small projects,
+> as well as straightforward changes like creating or removing files.
+> It is also possible to work with only portions of a commit
+(such as a single file out of many files changed).
 
 ## Ignoring things
 
