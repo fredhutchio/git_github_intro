@@ -391,20 +391,57 @@ This task is covered in [this challenge](class3.md#challenge-ignoring) using com
 
 This is a basic introduction to ignoring files with Git.
 It's useful to know that you can ignore entire folders in your repository,
-as well as apply [wildcards](https://en.wikipedia.org/wiki/Wildcard_character) to ignore files with certain names. 
+as well as apply [wildcards](https://en.wikipedia.org/wiki/Wildcard_character) to ignore files with certain names.
 
 
 ## Branches
 
-* branch: a parallel version of the “master” repository that allows you to test changes without affecting the original (or live) version; changes in a branch can be merged back to the “master” when a particular task has been completed
-* why use branches?
-	* when working collaboratively, someone else may want to try something but you need to keep working without seeing their changes
-	* you may want to try something that has a chance of not working, and you don't want to risk having to undo a bunch of stuff
-* create new branch called "wacky-branch"
-* add some data files, commit
-* show original branch and note files aren't there (also show on Desktop!)
-* merge branches and show history
-* deleting old branch: when on branch, menu option (note that branch is completely gone forever!)
+Another feature that you may choose to integrate into your workflow is the use of branches.
+Your primary, or default, branch is named "master".
+Creating a new branch provides a parallel version which allows you to experiment with changes.
+It provides the opportunity to make and test changes,
+after which you can choose to merge the those changes back to your original branch.
+Some people choose to create new branches for every new part of a project in their repository,
+only merging back to "master" when they are satisfied with the completed work.
+Other times,
+you may choose to work in a separate branch if you are trying something that has a chance of not working,
+and you don't want to risk eventually needing to undo previous commits.
+Finally, we'll talk in our next class about the use of branches for collaboration;
+branches allow multiple people to work on the same project without interfering in each other's progress
+(though these branches can still be merged at the end!).
+
+We can explore branches by confirming that our working branch is "master",
+as seen in GitHub Desktop in the "Current branch" tab.
+Click on "New Branch" and enter the name "wacky-branch".
+Create a new file called `results.txt` and save the following text within it:
+
+```
+Brilliant results!
+```
+
+Next, add the following line to the existing `README.md` file:
+
+```
+results.txt contains output from the analysis
+```
+
+Commit changes to these two files at the same time in "wacky-branch",
+adding "Testing a wacky idea!" as your commit message.
+Change back to the default branch by clicking on "Current Branch" and selecting "master".
+Note that the last commit you made is not shown under "History" for this branch.
+
+Click on the "Current branch" tab again,
+then the button at the bottom of that pop-up window that says "Choose a branch to merge into master".
+Select "wacky-branch" under "Recent branches"
+and click the button to "Merge wacky-branch" into "master".
+You should now see the last commit message (initially created in "wacky-branch")
+as a part of the history of "master".
+
+When you are done working on a branch,
+you should delete the old branch.
+You can do this in GitHub Desktop by going to the "Branch" menu,
+then selecting "Delete".
+Remember that deleting a branch means it's gone forever!
 
 
 ## Wrapping up
