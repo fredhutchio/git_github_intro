@@ -346,14 +346,52 @@ it has allowed us to see how we can work with a few of the features of Git.
 
 ## Ignoring things
 
-* create new file, temp.txt, save and commit
-* Repository -> Repository settings
-* select tab for "Ignored Files"
-* add temp.txt to this file; what happens?
-* add notes.txt to the ignore file; what happens?
-	* this is an example of a specific task which may be better accomplished with command line functions
-	* preview concerns with managing large data files or secure info
-* can ignore entire directories, or use wildcards to indicate types of files
+While version control is focused on changes in files we'd like to track,
+but there are also files for which we do *not* want to track changes.
+Some examples of files associated with a project you may not want to track with the repository include:
+- large data files that are archived elsewhere
+- files containing proprietary or sensitive information, such as personal health information (PHI) and passwords
+- files not necessary to the general project but created by your [operating system](https://gist.github.com/octocat/9257657) or [coding language](https://github.com/github/gitignore)
+
+If these files are located in the Git repository,
+Git will continue to include them among files staged for commit.
+We don't want to forget to unstage them,
+and we'll quickly get tired of needing to uncheck the box in GitHub Desktop.
+
+Luckily, we can use tools in Git to ignore these files for us.
+To demonstrate this,
+let's create a new file called `temp.txt` with a single line of text:
+
+```
+Intermediate results, for temporary use only.
+```
+
+In GitHub Desktop,
+go to the Repository menu and select "Repository settings".
+Select the tab for "Ignored Files",
+and add `temp.txt` to this file.
+
+You should note `temp.txt` no longer appears in the "Changes" window on the lefthand side of your application.
+However, you will see a new file called `.gitignore`.
+This is a special file recognized by Git that does exactly what its title indicates:
+tells Git what files to ignore.
+While this file immediately ignores the listed files,
+you'll still need to commit it to ensure these changes are maintained.
+
+Using the same process above,
+add `notes.txt` to the ignore file.
+You'll notice that this file behaves differently;
+it still shows up in the Changes panel.
+This is because `notes.txt` has already been tracked by our repository.
+Ignoring a file cannot remove the entire record of the file from the Git history.
+
+> If you accidentally commit a file that should be ignored,
+it is possible to completely scrub a version history of the file.
+This task is covered in [this challenge](class3.md#challenge-ignoring) using command line tools in class 3.
+
+This is a basic introduction to ignoring files with Git.
+It's useful to know that you can ignore entire folders in your repository,
+as well as apply [wildcards](https://en.wikipedia.org/wiki/Wildcard_character) to ignore files with certain names. 
 
 
 ## Branches
