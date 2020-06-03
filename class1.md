@@ -275,7 +275,6 @@ notes.txt holds notes about the analysis
 Commit the changes to both of these files.
 
 > #### Challenge-flow
-
 > - Create a new file in your project directory named `analysis.txt`.
 > Add a line of content to the file and commit it to your repository.
 > - Make changes to both `analysis.txt` and `notes.txt`,
