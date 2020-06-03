@@ -441,7 +441,13 @@ When you are done working on a branch,
 you should delete the old branch.
 You can do this in GitHub Desktop by going to the "Branch" menu,
 then selecting "Delete".
+To be able to select this issue,
+you'll need to make sure the branch you are deleting is your working branch.
 Remember that deleting a branch means it's gone forever!
+
+> GitHub Desktop requires that you are located on the branch you wish to delete in order to select it for removal.
+This is the *opposite* of the git command line workflow that we'll cover in class 3,
+in which you *cannot* be located on your working branch when deleting it.
 
 
 ## Wrapping up

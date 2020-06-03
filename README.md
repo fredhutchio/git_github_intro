@@ -15,6 +15,8 @@ This two-class course (with optional third class session) is designed to introdu
 ## Resources
 
 * Each set of class materials are described in the relevant `class*.md` file.
-* `instructors.md` includes information for instructors to facilitate teaching each lesson
-* `hackmdio.md` is an archive of the [interactive webpage](https://hackmd.io) used during lessons
+* [`faq.md`](faq.md) includes answers to common questions,
+specifically related to troubleshooting software.
+* [`instructors.md`](instructors.md) includes information for instructors to facilitate teaching each lesson
+* [`hackmdio.md`](hackmdio.md) is an archive of the [interactive webpage](https://hackmd.io) used during lessons
 * Information about use of Git and GitHub at Fred Hutch is available on the [Data Science Wiki](https://sciwiki.fredhutch.org/scicomputing/software_managecode/)
