@@ -170,32 +170,108 @@ although deleting the repository on GitHub does *not* affect your local copy.
 
 ## Collaboration through forking
 
-* Example repository: https://github.com/fredhutchio/guacamole
-	* have default branch set to month and year for class
-* issues
-	* way to interact with developers about their code, request new features, report bugs
-	* anyone with GitHub account can post issue
-	* not always appropriate to ask questions about how to use software (see other documentation, Google groups, etc)
+So far we've only worked with our own repositories.
+However, GitHub provides powerful features for interacting with other people's repositories, too.
 
-> #### Challenge-issue
+We'll be using an example repository from the fredhutch.io GitHub organization called [guacamole](https://github.com/fredhutchio/guacamole) to learn about collaboration via GitHub.
+This repository represents information about making guacamole.
+
+On each repository's page,
+there is a tab under the title called "Issues".
+[Issues](https://guides.github.com/features/issues/)
+are a method of tracking tasks, document bugs, and otherwise plan for continued development of a project.
+Each issue may include:
+- title and description,
+including information to replicate the problem in the case of a bug
+- subsequent discussion about the issue
+- labels indicating the type of issue
+- information about who is assigned to the task,
+as well as its inclusion in milestones and/or projects (tools GitHub provides to set goals)
+
+>#### Challenge-issue
 Create an issue in the `guacamole` repository suggesting how to improve the recipe.
 
-* fork repository
-	* this repository is owned by fredhutchio (GitHub organization)
-	* you don't have permission to work directly with the repository
-	* click "fork" button in the upper right hand corner of repo
-	* this creates a copy of the repository of your own that is connected with the original, but which you can edit yourself
-	* relate back to branches
-* edit ingredients.txt to include additional ingredients
-* create new file called recipe.txt to include steps in process to making guac
-* compare with original version in fredhutchio
-	* can choose additional comparisons (e.g., other people, or other branches)
-	* create pull request (PR): way to request that original repo will accept your changes
-	* text editing options, linking people, issues, etc
-	* PR etiquette: explain sufficiently the changes and why; be polite
-* Challenge: pair up with a partner and create pull request (PR) to send your changes to their repo
-	* when comparing, your repo will be on the left and their repo will be on the right
-	* don't worry yet about approving pull request
+Now that we have an idea of what needs to be done to improve this repository,
+let's suggest some changes.
+This repository is owned by the [fredhutch.io GitHub organization](https://github.com/fredhutchio),
+so we don't have permission to interact with it directly.
+Click the button called "Fork" in the top right corner of the repository's GitHub page.
+Forking creates a copy of the original repository that belongs to you,
+so that you can edit the files contained within it.
+
+In your `guacamole` fork,
+edit `ingredients.txt` to include what you think needs to be included in this dish.
+Forks allow repositories with early parts of their revision history to remain connected to each other,
+so you'll see a button called "Compare" above the file browser in the main repository page.
+
+The page that appears shows the differences between your fork ("head repository")
+and the original repository ("base repository").
+If you are satisfied with your changes,
+click the button to "Create a pull request".
+A [pull request, or PR,](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests)
+notifies the original repository's owner that you have made changes that you'd like to be included in the original repository.
+The page that appears automatically enters the specific comparison from the "Comparing changes" page.
+There are also text boxes that allow you to enter a title and description.
+These are your opportunity to explain what files are being changed and why.
+You have the ability to link issues, tag people,
+and otherwise communicate your intentions.
+When you click the button to "Create pull request",
+your submission will be viewable under the "Pull requests" tab (next to Issues under the repository's name).
+
+After submitting a pull request,
+the owner of the repository will be notified,
+and they'll be able to review the suggested changes.
+The pull request page in their repository includes space to share additional comments.
+When the original repository's owner is satisfied with the changes,
+they will merge the changes,
+after which you can delete your branch from your own fork.
+Alternatively,
+they may not accept your pull request,
+and will instead close it without merging.
+In that case, you can decide how to proceed:
+if you like the work you've done,
+you can always continue working on your own fork!
+
+>#### Challenge-pr
+Create a pull request to ask that changes in your `guacamole` repository be added to the fredhutch.io version.
+Your instructor will select a pull request to demonstrate the process of merging (accepting changes).
+
+You may have noticed earlier that there was an option to select the branch from your fork to compare.
+This is because the pull request only includes a single fork from each repositories.
+Any subsequent changes you make to your branch associated with the pull request will be reflected in the pull request.
+This means you can make additional changes in response to your collaborators.
+It also means that if you delete your branch, your pull request will be impossible to merge.
+
+In this section,
+we've worked through the process of submitting a pull request to a collaborative project using the "fork and pull" development model.
+Alternatively, some (generally small) projects use a "shared repository" model,
+in which all contributors are added to the same repository,
+and individuals work on separate branches.
+In both cases,
+pull requests are used to show differences among branches and share discussion about the changes.
+For more information on these two models,
+see [this page](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-collaborative-development-models).
+If you are in doubt about how to contribute,
+check the repository to which you'd like to submit a pull request.
+Many projects share guidelines about how to contribute to their project in their `README` or a separate file named something like `CONTRIBUTING`.
+When in doubt,
+create a fork: it doesn't require additional sharing of permission on the part of the original repository owner.
+Be aware, though,
+that not everyone interacts with Git and GitHub in the same way,
+so sometimes it takes a few messages back-and-forth to get on the same page about what will work for you both.
+
+>#### Challenge-patch
+Go to the repository for the [Fred Hutch Biomedical Data Science Wiki](https://github.com/FredHutch/wiki)
+and click on the page for [`about.md`](https://github.com/FredHutch/wiki/blob/master/about.md).
+You do not have permission to contribute directly to this repository,
+but there is still a pencil icon at the top right of the file content viewer.
+Click on the pencil and read the information box at the top of the page.
+What would you do, and what would happen,
+if you wanted to suggest changes to this file?
+*This exercise assumes you are not currently a part of the Fred Hutch GitHub organization.
+If you are already a member of this organization,
+choose a different repository to which you do not currently have access
+(like the repository for [this class](https://github.com/fredhutchio/git_github_intro)).*
 
 
 ## Resolving conflicts
@@ -238,3 +314,7 @@ Create an issue in the `guacamole` repository suggesting how to improve the reci
 Today, we explored the use of GitHub to publish our own code/data,
 as well as how to contribute to someone else's repository using GitHub.
 The [GitHub.com help documentation](https://help.github.com/en/github) includes additional examples and illustrations for the tasks we covered today (and more!).
+
+Our next (and final) class is also optional.
+It will review the materials from the first two classes as implemented on the command line,
+and also highlight a few things that the command line interface can accomplish that aren't possible with the tools we've used so far.
