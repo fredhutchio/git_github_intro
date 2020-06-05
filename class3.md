@@ -53,6 +53,9 @@ This should show relevant details,
 like the user name and email,
 associated with any future Git commits.
 
+> If you are on a Mac and receive an error starting with `xcrun`,
+follow [these instructions](http://www.fredhutch.io/software/#command-line-tools-mac-only-for-optional-third-week) to install command line tools.
+
 This also introduces the basic syntax for Git:
 
 		git VERB
@@ -80,10 +83,7 @@ Next, initialize your new directory:
 
 This instructs git to create `.git/`
 in your working directory,
-which is the location for records of previous file versions:
-
-		git init
-
+which is the location for records of previous file versions.
 We can view this file by listing everything in the directory,
 including hidden files:
 
@@ -132,7 +132,7 @@ but not yet tracked with Git.
 
 We can add our file:
 
-		git add code.txt
+		git add code.sh
 
 Check status:
 
@@ -214,55 +214,77 @@ Display the differences between this file's updated state and its original state
 
 * prompts in git output can help you!
 * compare different versions of commits
-	* HEAD~1 (HEAD minus 1) and HEAD~2 refer to old commits: most recent end of chain is HEAD
-	* `git diff HEAD~1 code.txt`
-	* `git diff HEAD~2 code.txt`
-	* `git show HEAD~2 code.txt` : includes changes and commit message
-	* `git log` gives strings of digits and letters: `git diff XXXXXXXX code.txt`
-	* can also just use first few characters: `git diff XXX code.txt`
+	* `HEAD~1` (HEAD minus 1) and `HEAD~2` refer to old commits: most recent end of chain is HEAD
+	* `git diff HEAD~1 code.sh`
+	* `git diff HEAD~2 code.sh`
+	* `git show HEAD~2 code.sh` : includes changes and commit message
+	* `git log` gives strings of digits and letters: `git diff XXXXXXXX code.sh`
+	* can also just use first few characters: `git diff XXX code.sh`
 * how to revert to old version?
-	* make another change to code.txt, `git status`
-	* `git checkout HEAD code.txt` to remove unstaged changes (default to previous committed version)
-	* `git checkout XXX code.txt` to go back further in history
+	* make another change to code.sh, `git status`
+	* `git checkout HEAD code.sh` to remove unstaged changes (default to previous committed version)
+	* `git checkout XXX code.sh` to go back further in history
 	* remember that you want changes before most recent commit
 	* if you use `git checkout` without a file name, may end up with detached head
 	* git revert
-* Challenge: git checkout can be used to restore a previous commit when unstaged changes have been made, but will it also work for changes that have been staged but not committed? Make a change to code.txt, add that change, and use git checkout to see if you can remove your change.
+* Challenge: git checkout can be used to restore a previous commit when unstaged changes have been made, but will it also work for changes that have been staged but not committed? Make a change to code.sh, add that change, and use git checkout to see if you can remove your change.
 
 
 ## Ignoring things
 
-* sometimes backup files are created by other programs, or intermediate files we don't want to track
-* create dummy files:
+We talked in our first class about ignoring files that aren't necessary (or are inappropriate)
+to include in the repository.
+We can examine ignoring files on the command line by first creating some empty files representing things we wish to ignore:
 
 		mkdir results
 		touch temp.dat output.dat results/a.txt results/b.txt
+
+Let's check what Git thinks we need to commit:
+
 		git status
 
-Lots of stuff needs to be committed, but we don't want to!
-		nano .gitignore`
-
-Then add the following content to the file:
+Git thinks lots of stuff needs to be committed,
+but we don't want to!
+Let's use `nano .gitignore` to create our file listing things to ignore,
+then add the following to the file:
 
 		temp.dat
 		results/
+
+Let's view what git recognizes as untracked files now:
+
 		git status
 
 What files remain to be tracked?
+Let's add and commit these files:
 
 		git add .gitignore output.dat
 		git commit -m “add ignore file”
+
+And again check our status:
+
 		git status
 
 What happens if we try to now add an ignored file?
 
 		git add a.dat
 
-View all ignored files:
+As the response indicates,
+we can forcibly ignore a file.
+This may be useful in cases where we might induce changes in a file,
+but don't want those changes added to the repository.
+
+In these cases, it may be useful to examine the status of ignored files:
 
 		git status --ignored
 
-**Challenge:** Ignoring files that have already been committed retains the file in the git log. How could we remove these completely from the repo? https://help.github.com/articles/removing-sensitive-data-from-a-repository/
+>#### Challenge-ignoring
+Ignoring files that have already been committed retains the file in the git history. How could we remove these completely from the repo, and check to be sure that we were successful?
+
+Git on the command line has many more options to flexibly ignore files,
+so please keep in mind the following resources to ensure your repository's history is maintained in an appropriate manner:
+- [Removing sensitive data from a repository](https://help.github.com/articles/removing-sensitive-data-from-a-repository/)
+- [Removing files from a repository's history](https://help.github.com/en/github/managing-large-files/removing-files-from-a-repositorys-history)
 
 
 ## Publishing local repository to GitHub
