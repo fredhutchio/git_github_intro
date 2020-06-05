@@ -276,37 +276,30 @@ choose a different repository to which you do not currently have access
 
 ## Resolving conflicts
 
-* instructor looks at PRs submitted to original guacamole repo
-	* accept one of the PRs, modeling how conversation might take place
-	* find another that causes a conflict
-	* must resolve conflicts before merging new changes
-	* multiple ways to accomplish this: through web app, or in local repo with Desktop app
-	* each file must be handled; remind about how differences in files are reported
-	* for code, it matters a lot that extra added characters (>>>>> and <<<<<) are removed
-* review commit history, contributors, etc
-* Challenge: reconcile changes to accept PR from neighbor's repo
+The pull requests we've encountered so far have been straightforward in the sense that the changes were easily accomodated in the original repository.
+Sometimes pull requests involve changes that overlap with a previously merged pull request,
+and Git cannot differentiate which changes are preferential,
+since they both occurred since the last shared commit in history.
+In these cases,
+Git reports that conflicts have occurred by a box at the bottom of the pull request page stating
+"This branch has conflicts that must be resolved".
+By clicking on the "Resolve conflicts" button,
+an interface appears that highlights the conflict,
+including the following:
+- `<<<<<<<` followed by the branch name and the suggested change from the PR
+- `=======`, which separates the two conflicting changes
+- `>>>>>>>` followed by the branch name and the original repository's content
 
+Resolving the conflict requires deciding how to reconcile the changes,
+as well as removing the conflict notation (symbols `< = >`).
+After resolving the conflict,
+the "Mark as resolved" button will become clickable.
+The interface will prompt to "Commit merge".
+This commits the conflict resolution,
+and will afterwards return to the pull request page.
+The final step will be to normally merge and close the pull request.
 
-## Collaborate through patches
-* Challenge: try to edit Kate's wiki repo by clicking on the edit (pencil) button
-	* creates new branch (patch) in own forked repo
-	* "suggest changes" seamlessly integrates branch (patch) with PR to original repo
-
-
-## Open science
-
-* relate to reproducibility: more open means more citation and reuse
-* a repo as a unit of a manuscript; README includes link to final paper
-* can use version control as electronic lab notebook for computational work
-* licensing:
-	* found in LICENSE or LICENSE.txt
-	* dictates how materials can be used
-	* additional resources for choosing a license, etc
-	* you have accepted licensing associated with software already (every time you use something!)
-* web hosting
-	* example: http://www.fredhutch.io, click "GitHub Project" in left menu to see code
-	* .io suffix
-	* gh-pages
+Your instructor will demonstrate how this works using an additional pull request for `guacamole`, but for another set of instructions please [go here](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/resolving-a-merge-conflict-on-github).
 
 
 ## Wrapping up
