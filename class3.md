@@ -202,9 +202,11 @@ add an option that will allow us to view these changes:
 
 		git diff –-staged
 
-**Challenge:** Commit this last file and view the commit history.
+>#### Challenge-commit
+Commit this last file and view the commit history.
 
-**Challenge:** Create a new Git repository on your computer called `bio/`.
+>#### Challenge-init
+Create a new Git repository on your computer called `bio/`.
 Write a three-line biography for yourself in a file called me.txt.
 Commit your file, then modify one line and add a fourth line.
 Display the differences between this file's updated state and its original state.
@@ -212,22 +214,88 @@ Display the differences between this file's updated state and its original state
 
 ## Exploring history
 
-* prompts in git output can help you!
-* compare different versions of commits
-	* `HEAD~1` (HEAD minus 1) and `HEAD~2` refer to old commits: most recent end of chain is HEAD
-	* `git diff HEAD~1 code.sh`
-	* `git diff HEAD~2 code.sh`
-	* `git show HEAD~2 code.sh` : includes changes and commit message
-	* `git log` gives strings of digits and letters: `git diff XXXXXXXX code.sh`
-	* can also just use first few characters: `git diff XXX code.sh`
-* how to revert to old version?
-	* make another change to code.sh, `git status`
-	* `git checkout HEAD code.sh` to remove unstaged changes (default to previous committed version)
-	* `git checkout XXX code.sh` to go back further in history
-	* remember that you want changes before most recent commit
+Now that we have some commits in our history,
+we can start to explore commands to work with that history.
+
+The first common task is to compare previous versions in our history.
+We discussed `git diff` earlier in the context of changed and stage files,
+but we can compare a single file between two different commits as well:
+
+		git diff HEAD~1 code.sh
+
+`HEAD` refers to the most recent commit in history.
+You can interpret `HEAD~1` as "HEAD minus 1",
+meaning this shows the differences between the last two commits.
+You may not see any differences if you didn't have a change to `code.sh` between the last two commits.
+You can use the same notation to explore other commits in history:
+
+		git diff HEAD~2 code.sh
+
+This shows the differences between the most recent commit and the third most recent commit.
+If you would like more information about these differences:
+
+		git show HEAD~2 code.sh
+
+This shows the changes as well as the commit message.
+
+This notation works for relatively recent commits, but can be difficult if you're dealing with commits much further back in history.
+You can use the SHA key (string of letters and numbers)
+for a commit (as reported in `git log`)
+to compare `HEAD` with a specific commit:
+
+		git diff 10752e9 code.sh
+
+Remember that your SHA will differ,
+as these are unique identifiers for each commit.
+While the original SHA is very long,
+you can use the beginning of the sequence.
+
+Now that we know how to inspect changes,
+we can address how to access earlier versions of files.
+Make another change to `code.sh`,
+and commit it to history.
+If you execute `git status`,
+you'll see the output includes a message telling you there is a file ready to be staged,
+and an alternative if you do not want to keep those changes.
+If we follow those directions:
+
+		git restore code.sh
+
+The changes we made are removed from `code.sh`,
+as that command instructs git to revert to the previous commmitted version.
+Please note that you can't undo that change!
+
+> Older versions of git instruct to use `git checkout -- FILENAME`,
+which also works on newer versions,
+but is less intuitive.
+
+> #### Challenge-checkout
+`git restore` (and `git checkout`)
+can be used to restore a previous commit when unstaged changes have been made.
+Will it also work for changes that have been staged but not committed?
+Make a change to `code.sh`,
+add the change to stage it,
+and then identify the steps needed to discard the changes.
+
+You can also use the abbreviated SHA to work with the content of a previous commit
+(remember that the SHA will be different for your repository!):
+
+		git checkout 1dffd8a code.sh
+
+You can use the previous tools we've explored,
+like `git status` and `git diff`,
+to inspect how this file differs from the most recent commit.
+The changes you see here reflect the status of the file at the commit you specified above.
+
+
 	* if you use `git checkout` without a file name, may end up with detached head
-	* git revert
-* Challenge: git checkout can be used to restore a previous commit when unstaged changes have been made, but will it also work for changes that have been staged but not committed? Make a change to code.sh, add that change, and use git checkout to see if you can remove your change.
+
+> Challenge-revert
+In our first class,
+we discussed use of the "revert" feature to work with our revision history.
+Using either the [online Git documentation](https://git-scm.com/docs)
+or the command line tools,
+how does `git revert` differ from the process we covered above?
 
 
 ## Ignoring things
@@ -345,7 +413,17 @@ so please keep in mind the following resources to ensure your repository's histo
 
 ## Wrapping up
 
-* review today's objectives
+In this class,
+we reviewed material from the first two classes and how to accomplish the same tasks on the command line.
+We also discussed a few special cases that can be performed on the command line,
+but which aren't accessible via most stand-alone software.
 
+This introductory course has provided an overview of many of the common terms, tasks,
+and workflows associated with Git.
+It is certainly not exhaustive,
+and Git is continually updated,
+so don't worry if you find yourself periodically frustrated.
 The [documentation for git](https://git-scm.com/docs) includes a complete list of all commands,
 as well as a few options for different cheat sheets.
+
+Good luck, and happy version control!
