@@ -355,60 +355,196 @@ so please keep in mind the following resources to ensure your repository's histo
 - [Removing files from a repository's history](https://help.github.com/en/github/managing-large-files/removing-files-from-a-repositorys-history)
 
 
-## Publishing local repository to GitHub
+## Publishing a local repository to GitHub
 
-* log in to GitHub, click icon in top right corner, create repo called `git_command_line`
-* resulting page has info about configuring repository, it's done the `mkdir git_project`, `cd git_project`, `git init` process remotely
-* connect the two repos: copy https url to clipboard
-* go to local repo (in shell): `git remote add origin URL`
-* `git remote -v`: check that it worked
-* origin is a nickname for remote repo
-* now send local changes to remote repo: `git push origin master`
-* check remote repo, changes should be there (may need to refresh)
-* create README file and add brief comment about the purpose of the materials, commit change, go back to terminal: `git pull origin master`
-* Challenge: How is `git push` different from `git commit`?
-* Challenge: You have cloned a repo owned by someone else. Can you push to and pull from that repo?
+Now that we've covered the general Git workflow for local repositories,
+we can start to explore connections with remote repositories on the command line.
+
+We'll start by logging on to GitHub.
+Click on the "+" icon in the top right corner of the screen,
+and then select "New repository".
+Enter `git_command_line` as the name for the repository.
+As the page indicates,
+you shouldn't change other options if you're connecting an existing repository.
+By clicking "Create repository",
+you're effectively performing `mkdir git_command_line`,
+`cd git_command_line`,
+and `git init` in the remote server.
+The following webpage is the placeholder for the content of your repository,
+and includes the instructions for how to connect them.
+We'll be using the instructions under the section header "…or push an existing repository from the command line".
+Click on the button to the right of the code to copy the lines to your clipboard so they can be pasted into your shell and executed.
+The first of these lines informs git where the remote repository can be found:
+
+		git remote add origin https://github.com/USERNAME/git_command_line.git
+
+The second line sends (pushes) the local changes to the remote repository:
+
+		git push -u origin master
+
+`origin` references the remote repository,
+and `master` indicates the branch.
+You should refresh the webpage following pushing to see the contents of your remote repository match those in your local.
+
+If you are unsure what remote repository (or repositories) are connected to your local repository,
+you can also run:
+
+		git remote -v
+
+The two lines output from that command include successfully connected `origin` for both pushing and pulling.
+
+Now that you have connected your repositories,
+on the online GitHub interface (remote repository)
+you should see an option asking if you'd like to create a README file.
+After clicking on that button,
+add a line or two of text in the document describing the purpose of the materials and commit the change.
+Return to your shell interface (local repository)
+and run the following:
+
+		git fetch
+
+This command compares the two repositories (local and remote)
+and provides a report of what differences exist between them.
+This report should indicate that your branch (meaning the local repository) is behind the remote repository by one commit,
+and can be fast-forwarded (meaning there are no conflicts and can be merged easily).
+You can follow the instructions and execute:
+
+		git pull
+
+This command is a shortcut for `git pull origin master`.
+You aren't required to use `git fetch` prior to pulling,
+but it's often a good idea to know what changes you'll be adding to your local repository prior to pulling.
+
+> #### Challenge-pull
+Make a change to the README in your *remote* `git_command_line` repository.
+Now make a conflicting change (e.g., on the same line) in the README in your local repository.
+What does Git do when you attempt to push changes from your local repository?
 
 
-## Working with branches
+## Collaborating on the command line
 
-* Look at existing branches: `git branch`
-* Create new branch called testing: `git branch testing`
-* `git branch`
-* Switch to new branch: `git checkout testing`
-* Create new branch and checkout at same time: `git checkout -b testing2`
-* Try to delete branch: `git branch -D testing2`
-* `git checkout testing`
-* Successfully delete: `git branch -D testing2`
-* create new file (in testing), commit
-* switch to master
-* `git merge testing master`
-* Delete old branch
+This section will allow us to explore workflows for collaborating with git on the command line,
+including the following tasks:
+- cloning repositories
+- setting upstream repositories
+- branching
 
-##
+We'll be revisiting the [guacamole](https://github.com/fredhutchio/guacamole)
+repository we used in our previous class.
+During our exploration of GitHub,
+we forked the repository to create our own copies,
+made changes to our own repositories,
+and submitted pull requests to the original repository.
+All of these tasks were completed using the online web-based GitHub interface.
 
-### Updating local repositories with a remote repo owned by someone else
+Here, we'll explore how to use command line tools to make changes to the repository locally.
+First, go to the webpage for *your* fork of this repository
+(the URL should be `https://github.com/USERNAME/guacamole`,
+where USERNAME is your GitHub ID).
+Click on the button to "Clone or download",
+and click the button next to the web URL to copy the address.
 
-* Change added to guacamole repo
-* obtain URL to fredhutch.io/guacamole
-* git remote add upstream URL (set remote)
-* git remote -v (check)
-* git fetch upstream (fetch updates)
-* git checkout master (checkout master fork)
-* git merge upstream/master (add upstream changes without losing local changes)
+Switch over to your shell interface.
+Navigate to the location in your computer where you'd like the repository to be stored,
+then clone it:
+
+		git clone https://github.com/USERNAME/example_analysis_repo.git
+
+You should now have a folder in your working directory named `guacamole`.
+
+We'll be using a new branch to make changes to this repository.
+First, let's look at our existing branches:
+
+		git branch
+
+We can make a new branch named `recipe`:
+
+		git branch recipe
+
+If we used `git branch` again,
+we'd see that we are still working on our master branch,
+but our new branch is now listed as another option.
+
+We can checkout the new branch:
+
+		git checkout recipe
+
+Executing `git branch` or `git status` will now report that your working branch is `recipe`.
+
+> It's possible to create a new branch and check it out at the same time using: `git checkout -b recipe`
+
+Create a new file called `recipe.md` and add a few lines of instructions about how to use the foods in `ingredients.txt` to make guacamole.
+Add and commit your changes.
+
+If you would like to submit these changes to the original guacamole repository,
+you'll need to publish your changes for the new branch to GitHub.
+You could try:
+
+		git push
+
+But you'll receive an error: "fatal: The current branch testing has no upstream branch."
+Luckily, you'll also see a suggestion for how to resolve this:
+
+		git push --set-upstream origin recipe
+
+When you refresh the webpage for your repository,
+you'll now see the `recipe` branch available there,
+ready to compare and submit as a pull request.
+
+If, instead, you wanted to incorporate the changes from `recipe` into your own `master` branch,
+you could switch to the `master` branch in your local repository:
+
+		git checkout master
+
+Then execute the merge:
+
+		git merge recipe master
+
+This adds the change you made in `recipe` to your default branch.
+
+Whichever way your workflow proceeds,
+you will likely want to delete a branch when you're done working with it:
+
+		git branch -D recipe
+
+Note that you cannot delete your current working branch.
+This is the *opposite* of GitHub Desktop,
+where you can only delete your working branch!
+
+> #### Challenge-clone
+Let's assume you would like to work with the code present in this [example analysis repository](https://github.com/fredhutchio/example_analysis_repo),
+which is owned by fredhutch.io.
+1. Describe the process you would undertake to contribute a new file to this repository.
+2. Next, assume there has been a potentially conflicting change to the original repository (owned by fredhutch.io) since you made your change,
+and you need to pull these changes into your local repository.
+What would you search for in help documentation to identify the commands required for this task?
 
 
-### Working with Git history
+### Advanced options on the command line
 
-[Cherrypicking](https://www.previousnext.com.au/blog/intro-cherry-picking-git) refers to merging only some commits from one branch into another
+We aren't able to cover all possible use cases for Git in this class.
+Here we'll briefly discuss a few other tasks sometimes discussed with version control.
 
+[Cherrypicking](https://www.atlassian.com/git/tutorials/cherry-pick) refers to selecting some commits from a branch and adding to another.
+It differs from a standard merge in that it allows only *some* changes between branches to be applied,
+and is useful in the following cases:
+- during collaboration,
+when a part of someone else's (yet uncompleted)
+work is needed for you to continue your task
+- to repair bugs in code that need to be reconciled quickly
+- selecting parts of a branch prior to closing/discarding the rest of the work
 
-[Rebasing](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase): moving or combining a sequence of commits to a new base commit.
-
-
-[Rebasing from a specific commit](https://blog.github.com/2015-06-08-how-to-undo-almost-anything-with-git/)
-
-		git rebase -i SHA
+[Rebasing](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase) is similar to merging in that it integrates changes from one branch into another.
+Whereas merging always continues forward in the version history,
+rebase reconciles previous changes to a repository.
+More specifically,
+it combines a sequence of commits in a branch with a new base commit.
+In effect,
+this causes your branch's history to appear that it was created at a different
+(usually more recent)
+point in the verion history.
+[Squash is often included with rebase](https://medium.com/@slamflipstrom/a-beginners-guide-to-squashing-commits-with-git-rebase-8185cf6e62ec)
+as a part of collaborative workflows.
 
 
 ## Wrapping up
