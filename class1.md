@@ -226,20 +226,20 @@ as Git doesn't recognize any changes.
 In order for Git to track the file,
 we need to create a commit.
 You can accomplish this task in the lower left hand panel of GitHub Desktop.
-Above the blue "Commit to master" button,
+Above the blue "Commit to main" button,
 there are two boxes for text entry.
 The smaller box on top is for the main commit summary,
 which should be brief (<50 characters).
 Use the second box to enter longer descriptions,
 which may be useful for more complex sets of changes.
 After you've entered a meaninginful message,
-click the button to "Commit to master", where "master" refers to the default branch (we'll talk more about branches later).
+click the button to "Commit to main", where "main" refers to the default branch (we'll talk more about branches later).
 
 This represents the basic Git workflow:
 
 - save changes to a file (for example, in a text editor)
 - stage the file to ensure it will be added to the repository (checking the box in GitHub Desktop)
-- commit the change (click the "Commit to master" button)
+- commit the change (click the "Commit to main" button)
 
 This may seem like a complex process,
 but it helps to think about it like shopping at a grocery store.
@@ -398,12 +398,18 @@ as well as apply [wildcards](https://en.wikipedia.org/wiki/Wildcard_character) t
 ## Branches
 
 Another feature that you may choose to integrate into your workflow is the use of branches.
-Your primary, or default, branch is named "master".
+Your primary, or default, branch is named "main".
+
+> Before summer 2020, 
+> the default branch in Git and GitHub was called "master" instead of "main."
+> It's also possible for the owner of a repository to change thename of the default branch. 
+> This knowledgemay be useful when you start looking at other people's code!
+
 Creating a new branch provides a parallel version which allows you to experiment with changes.
 It provides the opportunity to make and test changes,
 after which you can choose to merge the those changes back to your original branch.
 Some people choose to create new branches for every new part of a project in their repository,
-only merging back to "master" when they are satisfied with the completed work.
+only merging back to "main" when they are satisfied with the completed work.
 Other times,
 you may choose to work in a separate branch if you are trying something that has a chance of not working,
 and you don't want to risk eventually needing to undo previous commits.
@@ -411,7 +417,7 @@ Finally, we'll talk in our next class about the use of branches for collaboratio
 branches allow multiple people to work on the same project without interfering in each other's progress
 (though these branches can still be merged at the end!).
 
-We can explore branches by confirming that our working branch is "master",
+We can explore branches by confirming that our working branch is "main",
 as seen in GitHub Desktop in the "Current branch" tab.
 Click on "New Branch" and enter the name "wacky-branch".
 Create a new file called `results.txt` and save the following text within it:
@@ -428,15 +434,15 @@ results.txt contains output from the analysis
 
 Commit changes to these two files at the same time in "wacky-branch",
 adding "Testing a wacky idea!" as your commit message.
-Change back to the default branch by clicking on "Current Branch" and selecting "master".
+Change back to the default branch by clicking on "Current Branch" and selecting "main".
 Note that the last commit you made is not shown under "History" for this branch.
 
 Click on the "Current branch" tab again,
-then the button at the bottom of that pop-up window that says "Choose a branch to merge into master".
+then the button at the bottom of that pop-up window that says "Choose a branch to merge into main".
 Select "wacky-branch" under "Recent branches"
-and click the button to "Merge wacky-branch" into "master".
+and click the button to "Merge wacky-branch" into "main".
 You should now see the last commit message (initially created in "wacky-branch")
-as a part of the history of "master".
+as a part of the history of "main".
 
 When you are done working on a branch,
 you should delete the old branch.
