@@ -79,8 +79,10 @@ Octocat (octopus cat):
 ![GitHub Desktop icon with Octocat](images/octocat.jpeg)
 
 Next,
-go to the toolbar at the top and select "GitHub Desktop"
-and then "Preferences."
+go to the toolbar at the top:
+- Mac: select "GitHub Desktop" and then "Preferences"
+- Windows: select "File" then "Options"
+
 You should now be able to see the Preferences pop-up window.
 Let's check the settings in the following tabs:
 
