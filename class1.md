@@ -354,6 +354,11 @@ Some examples of files associated with a project you may not want to track with 
 - files containing proprietary or sensitive information, such as personal health information (PHI) and passwords
 - files not necessary to the general project but created by your [operating system](https://gist.github.com/octocat/9257657) or [coding language](https://github.com/github/gitignore)
 
+> If you're working with a text editor on a Mac,
+> you've probably noticed a file named `.DS_Store` appearing in GitHub Desktop as a new file.
+> This file is created by the operating system,
+> and is a good example of the last type of file to ignore.
+
 If these files are located in the Git repository,
 Git will continue to include them among files staged for commit.
 We don't want to forget to unstage them,
@@ -402,8 +407,8 @@ Your primary, or default, branch is named "main".
 
 > Before summer 2020, 
 > the default branch in Git and GitHub was called "master" instead of "main."
-> It's also possible for the owner of a repository to change thename of the default branch. 
-> This knowledgemay be useful when you start looking at other people's code!
+> It's also possible for the owner of a repository to change the name of the default branch. 
+> This knowledge may be useful when you start looking at other people's code!
 
 Creating a new branch provides a parallel version which allows you to experiment with changes.
 It provides the opportunity to make and test changes,
