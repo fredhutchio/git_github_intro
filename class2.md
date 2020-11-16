@@ -306,22 +306,22 @@ Your instructor will demonstrate how this works using an additional pull request
 
 Now that you have an idea of how remote and local repositories can be related to each other,
 it's worth noting how you can access someone else's code that is currently available on GitHub.
-We'll use the [repository for this class](https://github.com/fredhutchio/git_github_intro) as an example.
+We'll use an [example code repository](https://github.com/fredhutchio/example_analysis_repo) as an example.
 
 On every GitHub repository's online webpage,
-there is a green button near the upper righthand side of the screen that says "Clone or download".
+there is a green button near the upper righthand side of the screen that says "Code".
 This button allows you to obtain a copy of that repository's contents on your local computer.
 If you click the button,
 there are two options from which to choose:
-"Open in Desktop" and "Download ZIP".
+"Open with GitHub Desktop" and "Download ZIP".
 
 The first option will copy the contents of the repository to your local computer and open it using GitHub Desktop.
 This option retains the entire history of the repository as tracked by Git.
 
 The second option downloads a zipped copy of the default branch of the repository to your computer.
 If you select that option for [],
-you'll end up with a file called "git_github_intro-master.zip"
-(or a folder called "git_github_intro-master")
+you'll end up with a file called "example_analysis_repo-main.zip"
+(or a folder called "example_analysis_repo-main")
 in the default location for downloads on your own computer.
 This folder contains all of the files in the repository,
 but only a snapshot of the most recent commit.

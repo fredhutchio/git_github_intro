@@ -380,10 +380,10 @@ The first of these lines informs git where the remote repository can be found:
 
 The second line sends (pushes) the local changes to the remote repository:
 
-		git push -u origin master
+		git push -u origin main
 
 `origin` references the remote repository,
-and `master` indicates the branch.
+and `main` indicates the branch.
 You should refresh the webpage following pushing to see the contents of your remote repository match those in your local.
 
 If you are unsure what remote repository (or repositories) are connected to your local repository,
@@ -411,7 +411,7 @@ You can follow the instructions and execute:
 
 		git pull
 
-This command is a shortcut for `git pull origin master`.
+This command is a shortcut for `git pull origin main`.
 You aren't required to use `git fetch` prior to pulling,
 but it's often a good idea to know what changes you'll be adding to your local repository prior to pulling.
 
@@ -462,7 +462,7 @@ We can make a new branch named `recipe`:
 		git branch recipe
 
 If we used `git branch` again,
-we'd see that we are still working on our master branch,
+we'd see that we are still working on our main branch,
 but our new branch is now listed as another option.
 
 We can checkout the new branch:
@@ -491,14 +491,14 @@ When you refresh the webpage for your repository,
 you'll now see the `recipe` branch available there,
 ready to compare and submit as a pull request.
 
-If, instead, you wanted to incorporate the changes from `recipe` into your own `master` branch,
-you could switch to the `master` branch in your local repository:
+If, instead, you wanted to incorporate the changes from `recipe` into your own `main` branch,
+you could switch to the `main` branch in your local repository:
 
-		git checkout master
+		git checkout main
 
 Then execute the merge:
 
-		git merge recipe master
+		git merge recipe main
 
 This adds the change you made in `recipe` to your default branch.
 
