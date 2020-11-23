@@ -15,7 +15,7 @@ you should be able to:
 	- ignoring files
 	- connecting local and remote repositories
 	- working with branches
-- understand how to perform Git tasks that may be difficult or impossible to apply with a GUI,
+- understand how to find help to perform Git tasks that may be difficult or impossible to apply with a GUI,
 such as:
 	- updating a local repository with a remote repository owned by someone else
  	- cherrypicking
@@ -54,7 +54,7 @@ like the user name and email,
 associated with any future Git commits.
 
 > If you are on a Mac and receive an error starting with `xcrun`,
-follow [these instructions](http://www.fredhutch.io/software/#command-line-tools-mac-only-for-optional-third-week) to install command line tools.
+>follow [these instructions](http://www.fredhutch.io/software/#command-line-tools-mac-only-for-optional-third-week) to install command line tools.
 
 This also introduces the basic syntax for Git:
 
@@ -202,14 +202,14 @@ add an option that will allow us to view these changes:
 
 		git diff –-staged
 
->#### Challenge-commit
-Commit this last file and view the commit history.
+> #### Challenge-commit
+> Commit this last file and view the commit history.
 
->#### Challenge-init
-Create a new Git repository on your computer called `bio/`.
-Write a three-line biography for yourself in a file called me.txt.
-Commit your file, then modify one line and add a fourth line.
-Display the differences between this file's updated state and its original state.
+> #### Challenge-init
+> Create a new Git repository on your computer called `bio/`.
+> Write a three-line biography for yourself in a file called me.txt.
+> Commit your file, then modify one line and add a fourth line.
+> Display the differences between this file's updated state and its original state.
 
 
 ## Exploring history
@@ -266,16 +266,16 @@ as that command instructs git to revert to the previous commmitted version.
 Please note that you can't undo that change!
 
 > Older versions of git instruct to use `git checkout -- FILENAME`,
-which also works on newer versions,
-but is less intuitive.
+> which also works on newer versions,
+> but is less intuitive.
 
 > #### Challenge-checkout
-`git restore` (and `git checkout`)
-can be used to restore a previous commit when unstaged changes have been made.
-Will it also work for changes that have been staged but not committed?
-Make a change to `code.sh`,
-add the change to stage it,
-and then identify the steps needed to discard the changes.
+> `git restore` (and `git checkout`)
+> can be used to restore a previous commit when unstaged changes have been made.
+> Will it also work for changes that have been staged but not committed?
+> Make a change to `code.sh`,
+> add the change to stage it,
+> and then identify the steps needed to discard the changes.
 
 You can also use the abbreviated SHA to work with the content of a previous commit
 (remember that the SHA will be different for your repository!):
@@ -288,14 +288,18 @@ to inspect how this file differs from the most recent commit.
 The changes you see here reflect the status of the file at the commit you specified above.
 
 
-	* if you use `git checkout` without a file name, may end up with detached head
+> If you receive a rather alarming error referencing `detached HEAD`,
+> you've executed `git checkout` without a filename.
+> You can resolve this by executing `git checkout main` 
+> (replacing `main` with whatever branch you were previously working with),
+> which will return you to the `HEAD` state of `main`.
 
-> Challenge-revert
-In our first class,
-we discussed use of the "revert" feature to work with our revision history.
-Using either the [online Git documentation](https://git-scm.com/docs)
-or the command line tools,
-how does `git revert` differ from the process we covered above?
+> #### Challenge-revert
+> In our first class,
+> we discussed use of the "revert" feature to work with our revision history.
+> Using either the [online Git documentation](https://git-scm.com/docs)
+> or the command line tools,
+> how does `git revert` differ from the process we covered above?
 
 
 ## Ignoring things
@@ -347,7 +351,9 @@ In these cases, it may be useful to examine the status of ignored files:
 		git status --ignored
 
 >#### Challenge-ignoring
-Ignoring files that have already been committed retains the file in the git history. How could we remove these completely from the repo, and check to be sure that we were successful?
+> Ignoring files that have already been committed retains the file in the git
+> history. How could we remove these completely from the repo, and check to be sure
+> that we were successful?
 
 Git on the command line has many more options to flexibly ignore files,
 so please keep in mind the following resources to ensure your repository's history is maintained in an appropriate manner:
@@ -416,9 +422,9 @@ You aren't required to use `git fetch` prior to pulling,
 but it's often a good idea to know what changes you'll be adding to your local repository prior to pulling.
 
 > #### Challenge-pull
-Make a change to the README in your *remote* `git_command_line` repository.
-Now make a conflicting change (e.g., on the same line) in the README in your local repository.
-What does Git do when you attempt to push changes from your local repository?
+> Make a change to the README in your *remote* `git_command_line` repository.
+> Now make a conflicting change (e.g., on the same line) in the README in your local repository.
+> What does Git do when you attempt to push changes from your local repository?
 
 
 ## Collaborating on the command line
@@ -512,12 +518,12 @@ This is the *opposite* of GitHub Desktop,
 where you can only delete your working branch!
 
 > #### Challenge-clone
-Let's assume you would like to work with the code present in this [example analysis repository](https://github.com/fredhutchio/example_analysis_repo),
-which is owned by fredhutch.io.
-1. Describe the process you would undertake to contribute a new file to this repository.
-2. Next, assume there has been a potentially conflicting change to the original repository (owned by fredhutch.io) since you made your change,
-and you need to pull these changes into your local repository.
-What would you search for in help documentation to identify the commands required for this task?
+> Let's assume you would like to work with the code present in this [example analysis repository](https://github.com/fredhutchio/example_analysis_repo),
+> which is owned by fredhutch.io.
+> 1. Describe the process you would undertake to contribute a new file to this repository.
+> 2. Next, assume there has been a potentially conflicting change to the original repository (owned by fredhutch.io) since you made your change,
+> and you need to pull these changes into your local repository.
+> What would you search for in help documentation to identify the commands required for this task?
 
 
 ### Advanced options on the command line
