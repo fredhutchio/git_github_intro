@@ -408,7 +408,9 @@ Your primary, or default, branch is named "main".
 > Before summer 2020, 
 > the default branch in Git and GitHub was called "master" instead of "main."
 > It's also possible for the owner of a repository to change the name of the default branch. 
-> This knowledge may be useful when you start looking at other people's code!
+> This knowledge may be useful when you start looking at other people's code,
+> and make sure to check for the name of your default branch, 
+> since it may be different depending on the software version. 
 
 Creating a new branch provides a parallel version which allows you to experiment with changes.
 It provides the opportunity to make and test changes,

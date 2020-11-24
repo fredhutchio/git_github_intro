@@ -56,6 +56,12 @@ associated with any future Git commits.
 > If you are on a Mac and receive an error starting with `xcrun`,
 >follow [these instructions](http://www.fredhutch.io/software/#command-line-tools-mac-only-for-optional-third-week) to install command line tools.
 
+> If you chose to keep your email private when setting up your GitHub account,
+> the email address shown in the output from the command above 
+> (and also attached to your commits)
+> will be your GitHub-assigned no-reply email address,
+> which ends in `@users.noreply.github.com`.
+
 This also introduces the basic syntax for Git:
 
 		git VERB
@@ -93,8 +99,15 @@ Finally, we can see the current status of the Git tracking for this directory:
 
 		git status
 
-Note that the output here includes multiple comments that can helpfully identify further commands.
+Note that the output of the command above includes a suggestion for what you likely want to do next.
 
+> Remember in our first class when we talked about names of default branches?
+> Although GitHub may have updated the default branches for its repositories,
+> Git on the command line still creates the default branch as "master"
+> (note this is likely to change in 2021). 
+> If you're interested in renaming your default branch,
+> there are instructions [here](https://stevenmortimer.com/5-steps-to-change-github-default-branch-from-master-to-main/),
+> and we'll talk more about branches [below](#collaborating-on-the-command-line).
 
 ## Tracking changes
 
@@ -287,12 +300,11 @@ like `git status` and `git diff`,
 to inspect how this file differs from the most recent commit.
 The changes you see here reflect the status of the file at the commit you specified above.
 
-
 > If you receive a rather alarming error referencing `detached HEAD`,
 > you've executed `git checkout` without a filename.
-> You can resolve this by executing `git checkout main` 
-> (replacing `main` with whatever branch you were previously working with),
-> which will return you to the `HEAD` state of `main`.
+> You can resolve this by executing `git checkout master` 
+> (replacing `master` with whatever branch you were previously working with),
+> which will return you to the `HEAD` state of `master`.
 
 > #### Challenge-revert
 > In our first class,
@@ -386,10 +398,10 @@ The first of these lines informs git where the remote repository can be found:
 
 The second line sends (pushes) the local changes to the remote repository:
 
-		git push -u origin main
+		git push -u origin master
 
 `origin` references the remote repository,
-and `main` indicates the branch.
+and `master` indicates the branch.
 You should refresh the webpage following pushing to see the contents of your remote repository match those in your local.
 
 If you are unsure what remote repository (or repositories) are connected to your local repository,
@@ -417,7 +429,7 @@ You can follow the instructions and execute:
 
 		git pull
 
-This command is a shortcut for `git pull origin main`.
+This command is a shortcut for `git pull origin master`.
 You aren't required to use `git fetch` prior to pulling,
 but it's often a good idea to know what changes you'll be adding to your local repository prior to pulling.
 
@@ -454,7 +466,7 @@ Switch over to your shell interface.
 Navigate to the location in your computer where you'd like the repository to be stored,
 then clone it:
 
-		git clone https://github.com/USERNAME/example_analysis_repo.git
+		git clone https://github.com/USERNAME/guacamole.git
 
 You should now have a folder in your working directory named `guacamole`.
 
@@ -468,7 +480,7 @@ We can make a new branch named `recipe`:
 		git branch recipe
 
 If we used `git branch` again,
-we'd see that we are still working on our main branch,
+we'd see that we are still working on our default branch,
 but our new branch is now listed as another option.
 
 We can checkout the new branch:
